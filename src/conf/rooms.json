@@ -1,0 +1,11 @@
+[
+  {
+    "name": "room1",
+    "capacity": 10
+
+  },
+  {
+    "name": "room2",
+    "capacity": 20
+  }
+]
