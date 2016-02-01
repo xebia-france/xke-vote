@@ -1,3 +1,4 @@
 # xke-vote-4-room
 
-* npm start
+* npm install
+* node src/index.js
