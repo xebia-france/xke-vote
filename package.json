@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.13.3",
+    "express": "^4.13.4",
     "lodash": "^3.10.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "supertest": "^1.1.0",
+    "sinon": "^1.17.3",
+    "grunt": "^0.4.5",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-contrib-jshint": "^0.12.0"
   },
   "repository": {
     "type": "git",
