@@ -1,69 +1,50 @@
 import expect from 'expect';
+import expectJSX from 'expect-jsx';
 import React from 'react';
+import {wrap} from '../wrapper';
+import ShallowTestUtils from 'react-shallow-testutils';
 import _ from 'lodash';
 import TestUtils from 'react-addons-test-utils';
 import { bindActionCreators } from 'redux';
 import { Slots } from 'components/ChooseSlotsView/Slots';
+import { Slot } from 'components/ChooseSlotsView/Slot';
 
+expect.extend(expectJSX);
 
 function setup() {
   let props = {
-    slots: [{
-      period: '8h - 9h',
-      talks: [{
-        id: 1,
-        text: 'slot1',
-        selected: false
-      }, {
-        id: 2,
-        text: 'slot2',
-        selected: false
-      }
-      ]
-    },
-      {
-        period: '9h - 10h',
-        talks: [{
-          id: 3,
-          text: 'slot3',
-          selected: false
-        }, {
-          id: 4,
-          selected: false,
-          text: 'slot4'
-        }]
-      }],
-
-    selectTalk: expect.createSpy(),
-    submitChoosenTalks: expect.createSpy()
+    period: 'period',
+    talks: [{
+      id: 2,
+      text: 'text',
+      fondation: 'Back',
+      selected: false
+    }],
+    onClick: expect.createSpy()
   };
 
   let renderer = TestUtils.createRenderer();
-  renderer.render(<Slots {...props} />);
+  renderer.render(<Slot {...props} />);
   let output = renderer.getRenderOutput();
 
   return {
     props,
     output,
     renderer
-  }
+  };
 }
 
 describe('Slots components', () => {
   it('Should include an <ul> containing slots and talks', function () {
     const { output } = setup();
 
-    let [ slots ] = output.props.children;
-    expect(slots.type).toBe("ul")
+    let talk = ShallowTestUtils.findWithClass(output, "talk");
+    console.log(talk);
 
-    let slots1 = slots.props.children[0].props;
-    let slots2 = slots.props.children[1].props;
+    expect(talk.key).toBe('2');
+    expect(talk.props.primaryText).toBe('text');
 
-    expect(slots1.period).toBe("8h - 9h");
-    expect(slots1.talks.length).toBe(2);
-
-    expect(slots2.period).toBe("9h - 10h");
-    expect(slots2.talks.length).toBe(2);
+    console.log('_____');
 
   });
 
@@ -71,13 +52,13 @@ describe('Slots components', () => {
 
     it('should send choosen talks', function () {
       const { output, props } = setup();
-      let submit = output.props.children[1];
+      let submitTalk = ShallowTestUtils.findWithClass(output, "talk");
 
-      expect(props.submitChoosenTalks.calls.length).toBe(0);
+      expect(props.onClick.calls.length).toBe(0);
 
-      submit.props.onClick();
+      submitTalk.props.onClick();
 
-      expect(props.submitChoosenTalks.calls.length).toBe(1);
+      expect(props.onClick.calls.length).toBe(1);
     });
   });
 });

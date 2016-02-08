@@ -1,30 +1,6 @@
-export const slots = (state = [
-  {
-    period: '8h - 9h',
-    talks: [{
-      id: 1,
-      text: 'slot1',
-      selected: false
-    }, {
-      id: 2,
-      text: 'slot2',
-      selected: false
-    }
-    ]
-  },
-  {
-    period: '9h - 10h',
-    talks: [{
-      id: 3,
-      text: 'slot3',
-      selected: false
-    }, {
-      id: 4,
-      selected: false,
-      text: 'slot4'
-    }]
-  }
-], action) => {
+import {fakeSlots} from './fakeSlotsData';
+
+export const slots = (state = fakeSlots, action) => {
   switch (action.type) {
     case 'SELECT_TALK':
       return state.map(s =>

@@ -1,8 +1,5 @@
 import React, { PropTypes } from 'react';
 import '../styles/core.scss';
-import injectTapEventPlugin from 'react-tap-event-plugin'
-
-injectTapEventPlugin();
 
 // Note: Stateless/function components *will not* hot reload!
 // react-transform *only* works on component classes.
@@ -15,10 +12,8 @@ injectTapEventPlugin();
 // define it with a plain javascript function...
 function CoreLayout ({ children }) {
   return (
-    <div className='page-container'>
-      <div className='view-container'>
-        {children}
-      </div>
+    <div>
+      {children}
     </div>
   );
 }

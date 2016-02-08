@@ -99,7 +99,7 @@ webpackConfig.eslint = {
   configFile: paths.base('.eslintrc'),
   emitWarning: __DEV__,
   failOnError: false,
-  failOnWarning: false,
+  failOnWarning: false
 };
 
 // ------------------------------------
