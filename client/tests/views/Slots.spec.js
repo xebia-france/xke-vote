@@ -39,13 +39,9 @@ describe('Slots components', () => {
     const { output } = setup();
 
     let talk = ShallowTestUtils.findWithClass(output, "talk");
-    console.log(talk);
 
     expect(talk.key).toBe('2');
     expect(talk.props.primaryText).toBe('text');
-
-    console.log('_____');
-
   });
 
   describe('Submitting choosen talks', function () {
