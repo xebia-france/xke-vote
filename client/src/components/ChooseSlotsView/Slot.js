@@ -39,7 +39,7 @@ export const Slot = ({ period, talks, onClick }) => (
           <div key={talk.id}>
             <ListItem key={talk.id} onClick={() => onClick(period, talk.id)}
                       style={{backgroundColor: talk.selected ? colors.purple200 : colors.white}}
-                      className='talk'
+                      id='talk'
                       primaryText={talk.text}
                       leftAvatar={
                       <Avatar
@@ -49,7 +49,7 @@ export const Slot = ({ period, talks, onClick }) => (
                        >
                        {talk.fondation}
                       </Avatar>
-                          }
+                      }
             />
           </div>
         )}
@@ -64,7 +64,6 @@ Slot.propTypes = {
   talks: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     fondation: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     selected: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired
   }).isRequired).isRequired
