@@ -6,12 +6,14 @@ export const fakeSlots = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Front',
+      attendees: 12,
       selected: false
     }, {
       id: 2,
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Back',
+      attendees: 12,
       selected: false
     },
       {
@@ -19,6 +21,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Craft',
+        attendees: 12,
         selected: false
       },
       {
@@ -26,6 +29,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Agile',
+        attendees: 12,
         selected: false
       }
     ]
@@ -37,12 +41,14 @@ export const fakeSlots = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Devops',
+      attendees: 12,
       selected: false
     }, {
       id: 6,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       fondation: 'Cloud',
+      attendees: 12,
       selected: false
     },
       {
@@ -50,6 +56,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'IoT',
+        attendees: 12,
         selected: false
       },
       {
@@ -57,6 +64,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Mobile',
+        attendees: 12,
         selected: false
       }]
   },
@@ -67,12 +75,14 @@ export const fakeSlots = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Cloud',
+      attendees: 12,
       selected: false
     }, {
       id: 10,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       fondation: 'Craft',
+      attendees: 12,
       selected: false
     },
       {
@@ -80,6 +90,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Front',
+        attendees: 12,
         selected: false
       },
       {
@@ -87,6 +98,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Front',
+        attendees: 12,
         selected: false
       }]
   },
@@ -97,12 +109,14 @@ export const fakeSlots = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Agile',
+      attendees: 12,
       selected: false
     }, {
       id: 14,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       fondation: 'Back',
+      attendees: 12,
       selected: false
     },
       {
@@ -110,6 +124,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Cloud',
+        attendees: 12,
         selected: false
       },
       {
@@ -117,6 +132,7 @@ export const fakeSlots = [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Craft',
+        attendees: 12,
         selected: false
       }]
   }

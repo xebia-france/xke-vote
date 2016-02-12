@@ -7,10 +7,12 @@ import { Route, IndexRoute } from 'react-router';
 // very easy to navigate to files regardless of how deeply nested
 // your current file is.
 import CoreLayout from 'components/CoreLayout';
-import Slots from 'components/ChooseSlotsView/Slots';
+import ChooseSlots from 'components/ChooseSlotsView/ChooseSlots';
+import Votings from 'components/VotingResultsView/Votings';
 
 export default (
   <Route path='/' component={CoreLayout}>
-    <IndexRoute component={Slots} />
+    <IndexRoute component={ChooseSlots} />
+    <Route path='results'component={Votings}/>
   </Route>
 );

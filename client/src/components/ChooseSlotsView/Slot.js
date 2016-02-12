@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
-import _ from 'lodash';
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
 import Avatar from 'material-ui/lib/avatar';
 import styles from 'material-ui/lib/styles';
 import Paper from 'material-ui/lib/paper';
+import {getFondationStyle} from '../fondations.js';
 
 const colors = styles.Colors;
 
@@ -15,20 +15,6 @@ const paperStyle = {
 const subHeaderList = {
   fontSize: '1.5em',
   fontStyle: 'bold'
-};
-
-const fondations = [
-  {title: 'Front', color: colors.lightBlue400},
-  {title: 'Craft', color: colors.lightGreen400},
-  {title: 'Devops', color: colors.orange400},
-  {title: 'Cloud', color: colors.teal400},
-  {title: 'Back', color: colors.red400},
-  {title: 'Agile', color: colors.blueGrey400},
-  {title: 'IoT', color: colors.brown400},
-  {title: 'Mobile', color: colors.indigoA400}];
-
-const getFondationStyle = (fondation) => {
-  return _(fondations).filter(f => f.title === fondation).first();
 };
 
 export const Slot = ({ period, talks, onClick }) => (
