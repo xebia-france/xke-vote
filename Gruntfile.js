@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: "package.json",
     jshint: {
-      files: ['Gruntfile.js', 'src/index.js', 'src/main/**/*.js', 'test/*.js'],
+      files: ['Gruntfile.js', 'src/server/index.js', 'src/server/main/**/*.js', 'src/server/test/*.js'],
       options: {
         force: true
       }
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
           reporter: 'spec',
           quiet: false
         },
-        src: ['src/test/*.js']
+        src: ['src/server/test/*.js']
       }
     }
   });
