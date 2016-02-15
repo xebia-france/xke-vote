@@ -1,7 +1,3 @@
-.DS_STORE
-*.log
-.idea
 node_modules
-
-dist
-coverage
+.idea
+*.iml

@@ -1,6 +1,6 @@
 import expect from 'expect'
 import _ from 'lodash'
-import {slots as reducer} from '../../reducers/slots'
+import {slots as reducer} from '../../src/reducers/slots'
 
 describe('Slots Reducers', () => {
   const state = [{

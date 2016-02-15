@@ -1,3 +1,3 @@
 
 var app = require('./main/app');
-app.start("3000");
+app.start("8082");
