@@ -78,7 +78,8 @@
     "yargs": "^3.18.0",
     "lodash": "^4.2.1",
     "material-ui": "^0.14.4",
-    "react-bootstrap": "^0.28.2"
+    "react-bootstrap": "^0.28.2",
+    "socket.io-client": "^1.4.5"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",

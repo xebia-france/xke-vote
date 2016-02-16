@@ -1,4 +1,4 @@
-export const fakeSlots = [
+export const slotsData = [
   {
     period: '8h - 9h',
     talks: [{

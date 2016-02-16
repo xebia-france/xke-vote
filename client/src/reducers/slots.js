@@ -1,6 +1,4 @@
-import {fakeSlots} from './fakeSlotsData';
-
-export const slots = (state = fakeSlots, action) => {
+export const slots = (state = [], action) => {
   switch (action.type) {
     case 'SELECT_TALK':
       return state.map(s =>
@@ -15,6 +13,9 @@ export const slots = (state = fakeSlots, action) => {
       });
       console.log(choosenSlots);
       return state;
+    case 'INIT_STATE':
+      return [...state, ...action.initState];
+
     default:
       return state;
   }
