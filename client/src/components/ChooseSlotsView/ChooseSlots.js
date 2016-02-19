@@ -5,6 +5,7 @@ import { submitChoosenTalks } from '../../actions/slotsActions';
 import Slots from './Slots';
 import RaisedButton from 'material-ui/lib/raised-button';
 import AppBar from 'material-ui/lib/app-bar';
+import _ from 'lodash';
 
 const mapStateToProps = (state) => ({
   slots: state.slots
@@ -14,8 +15,8 @@ const mapDispatchToProps = (dispatch) => ({
   selectTalk: (period, talkId) => {
     dispatch(selectTalk(period, talkId));
   },
-  submitChoosenTalks: () => {
-    dispatch(submitChoosenTalks());
+  submitChoosenTalks: (slots) => {
+    dispatch(submitChoosenTalks(slots));
   }
 });
 
@@ -40,7 +41,7 @@ export const ChooseSlots = React.createClass({
         </div>
         <div className='row'>
           <div className='col-lg-3'>
-            <RaisedButton label='Submit Choices' primary onClick={submitChoosenTalks}
+            <RaisedButton label='Submit Choices' primary onClick={() => submitChoosenTalks(choosenSlots(this.props.slots))}
                           style={{margin: 20}}/>
           </div>
         </div>
@@ -48,5 +49,20 @@ export const ChooseSlots = React.createClass({
     );
   }
 });
+
+const choosenSlots = (slots) => {
+  if (slots) {
+    return _(slots).map(s => {
+      let selectedTalk = s.talks.filter(t => t.selected)[0];
+      if (selectedTalk) {
+        return {
+          period: s.period,
+          talk: selectedTalk.id
+        };
+      }
+    }).compact()
+      .value();
+  }
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChooseSlots);

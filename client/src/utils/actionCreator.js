@@ -7,3 +7,4 @@ export default function makeActionCreator (type, ...argNames) {
     return action;
   };
 }
+

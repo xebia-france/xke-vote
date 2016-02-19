@@ -50,6 +50,9 @@ app.start = (port) => {
   io.on('connection', (socket) => {
     socket.emit('initState', store.getState());
     console.log("socket is on :-)");
+    socket.on('action', (socket) => {
+      console.log('action : ' + socket);
+    });
   });
   return server;
 };

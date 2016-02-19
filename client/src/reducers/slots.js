@@ -4,18 +4,8 @@ export const slots = (state = [], action) => {
       return state.map(s =>
         slot(s, action)
       );
-    case 'SUBMIT_CHOOSEN_TALKS':
-      let choosenSlots = state.map(s => {
-        return {
-          period: s.period,
-          talk: s.talks.filter(t => t.selected)[0].id // handle case where no talk selected
-        };
-      });
-      console.log(choosenSlots);
-      return state;
     case 'INIT_STATE':
       return [...state, ...action.initState];
-
     default:
       return state;
   }

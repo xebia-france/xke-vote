@@ -15,9 +15,10 @@ const historyConfig = { basename: __BASENAME__ };
 const history = useRouterHistory(createHistory)(historyConfig);
 
 const initialState = window.__INITIAL_STATE__;
-const store = configureStore({ initialState, history });
 
 const socket = io(`${location.protocol}//${location.hostname}:8082`);
+
+const store = configureStore({ initialState, history, socket });
 socket.on('initState', state =>
   store.dispatch(initState(state))
 );
