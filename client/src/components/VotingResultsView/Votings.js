@@ -1,47 +1,32 @@
 import React, { PropTypes } from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { connect } from 'react-redux';
 import TalkProgressBar from './TalkProgressBar';
 import AppBar from 'material-ui/lib/app-bar';
 import Paper from 'material-ui/lib/paper';
+import { initState, updateVotes } from '../../actions/slotsActions';
 
 const mapStateToProps = (state) => ({
   slots: state.slots
 });
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+  updateVotes: (state) => {
+    dispatch(updateVotes(state));
+  }
+});
 
 const paperStyle = {
   margin: 20
 };
 
 export const Votings = React.createClass({
+  mixins: [PureRenderMixin],
   propTypes: {
     slots: PropTypes.arrayOf(PropTypes.shape({
       period: PropTypes.string.isRequired,
       talks: PropTypes.array.isRequired
     }).isRequired).isRequired
-  },
-
-  getInitialState: function () {
-    return {completed: 0};
-  },
-
-  componentDidMount () {
-    this.timer = setTimeout(() => this.progress(5), 1000);
-  },
-
-  componentWillUnmount () {
-    clearTimeout(this.timer);
-  },
-
-  progress (completed) {
-    if (completed > 70) {
-      this.setState({completed: 70});
-    } else {
-      this.setState({completed});
-      const diff = Math.floor(Math.random() * (10 - 1)) + 1;
-      this.timer = setTimeout(() => this.progress(completed + diff), 1000);
-    }
   },
 
   render: function () {
@@ -63,7 +48,7 @@ export const Votings = React.createClass({
                     <TalkProgressBar
                       key={talk.id}
                       text={talk.text}
-                      attendees={this.state.completed}
+                      attendees={talk.attendees}
                       fondation={talk.fondation}
                     />
                   )}

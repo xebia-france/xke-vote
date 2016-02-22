@@ -5,7 +5,23 @@ export const slots = (state = [], action) => {
         slot(s, action)
       );
     case 'INIT_STATE':
-      return [...state, ...action.initState];
+      return action.initState.map(s => {
+        return {
+          ...s, talks: s.talks.map(t => {
+            return {...t, selected: false};
+          })
+        };
+      });
+    case 'UPDATE_VOTES':
+      return state.map(s => {
+        return {
+          ...s, talks: s.talks.map(t => {
+            let talk = _(action.updateVotes).map('talks').flatten().filter({id: t.id}).first();
+            return { ...t, attendees: talk.attendees
+            };
+          })
+        };
+      });
     default:
       return state;
   }

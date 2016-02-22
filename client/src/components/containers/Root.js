@@ -6,7 +6,8 @@ export default class Root extends React.Component {
   static propTypes = {
     history: PropTypes.object.isRequired,
     routes: PropTypes.element.isRequired,
-    store: PropTypes.object.isRequired
+    store: PropTypes.object.isRequired,
+    socket: PropTypes.object.isRequired
   };
 
   get content () {

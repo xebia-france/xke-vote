@@ -6,31 +6,27 @@ export const slotsData = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Front',
-      attendees: 12,
-      selected: false
+      attendees: 0
     }, {
       id: 2,
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Back',
-      attendees: 12,
-      selected: false
+      attendees: 0
     },
       {
         id: 3,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Craft',
-        attendees: 12,
-        selected: false
+        attendees: 0
       },
       {
         id: 4,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Agile',
-        attendees: 12,
-        selected: false
+        attendees: 0
       }
     ]
   },
@@ -41,31 +37,27 @@ export const slotsData = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Devops',
-      attendees: 12,
-      selected: false
+      attendees: 0
     }, {
       id: 6,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       fondation: 'Cloud',
-      attendees: 12,
-      selected: false
+      attendees: 0
     },
       {
         id: 7,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'IoT',
-        attendees: 12,
-        selected: false
+        attendees: 0
       },
       {
         id: 8,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Mobile',
-        attendees: 12,
-        selected: false
+        attendees: 0
       }]
   },
   {
@@ -75,65 +67,57 @@ export const slotsData = [
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Cloud',
-      attendees: 12,
-      selected: false
+      attendees: 0
     }, {
       id: 10,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       fondation: 'Craft',
-      attendees: 12,
-      selected: false
+      attendees: 0
     },
       {
         id: 11,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Front',
-        attendees: 12,
-        selected: false
+        attendees: 0
       },
       {
         id: 12,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Front',
-        attendees: 12,
-        selected: false
+        attendees: 0
       }]
   },
   {
-    period: '11h - 12h',
+    period: '11h - 0h',
     talks: [{
       id: 13,
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       fondation: 'Agile',
-      attendees: 12,
-      selected: false
+      attendees: 0
     }, {
       id: 14,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       fondation: 'Back',
-      attendees: 12,
-      selected: false
+      attendees: 0
     },
       {
         id: 15,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Cloud',
-        attendees: 12,
-        selected: false
+        attendees: 0
       },
       {
         id: 16,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
         fondation: 'Craft',
-        attendees: 12,
-        selected: false
+        attendees: 0
       }]
   }
 ];

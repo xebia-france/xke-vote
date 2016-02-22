@@ -20,14 +20,14 @@ app.get('/slots', (req, res) => {
 });
 
 app.get('/session', (req, res) => {
-  if(session) {
+  if (session) {
     res.send(session);
   } else {
     res.sendStatus(204);
   }
 });
 
-app.post('/session', (req, res) =>{
+app.post('/session', (req, res) => {
   session = {slots: slots.list()};
   res.send(session);
 });
@@ -37,9 +37,9 @@ app.delete('/session', (req, res) => {
   res.end();
 });
 
-
 app.start = (port) => {
   store = makeStore();
+
   store.dispatch({
     type: 'SET_SLOTS',
     slots: slotsData
@@ -49,9 +49,12 @@ app.start = (port) => {
   io = socketIo(server);
   io.on('connection', (socket) => {
     socket.emit('initState', store.getState());
-    console.log("socket is on :-)");
-    socket.on('action', (socket) => {
-      console.log('action : ' + socket);
+    console.log('socket is on :-)');
+    socket.on('action', (action) => {
+      store.dispatch(action);
+      if (action.type === 'SUBMIT_CHOOSEN_TALKS') {
+        io.emit('updateVotes', store.getState());
+      }
     });
   });
   return server;
