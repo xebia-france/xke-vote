@@ -43,7 +43,7 @@ function setup() {
   };
 }
 
-describe('Slots components', () => {
+describe('[NATIVE SHALLOW] Slots components', () => {
   it('Should include an <ul> containing slots and talks', function () {
     const { output } = setup();
 

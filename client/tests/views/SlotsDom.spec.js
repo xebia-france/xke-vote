@@ -36,7 +36,7 @@ function setup() {
   };
 }
 
-describe('Slots Dom components', () => {
+describe('[NATIVE DOM] Slots Dom components', () => {
   it('Should include an <ul> containing slots and talks', function () {
     const { renderedDOM } = setup();
 

@@ -33,7 +33,9 @@ const karmaConfig = {
     },
     sassLoader: webpackConfig.sassLoader,
     externals: {
-      'react/lib/ReactContext': 'window'
+      'react/lib/ReactContext': 'window',
+      'cheerio': 'window',
+      'react/lib/ExecutionEnvironment': true
     }
   },
   webpackMiddleware: {
