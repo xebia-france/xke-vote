@@ -48,11 +48,19 @@ const slot = (state, action) => {
 const talk = (state, action) => {
   switch (action.type) {
     case 'SELECT_TALK':
-      return state.id !== action.talkId ? {...state, selected: false} : {...state, selected: true};
+      return selectTalk(action.talkId, state);
     case 'UPDATE_VOTES':
-      let talk = _(action.updateVotes).map('talks').flatten().filter({id: state.id}).first();
-      return {...state, attendees: talk.attendees};
+      return updateAttendees(action.updateVotes, state);
     default:
       return state;
   }
 };
+
+function updateAttendees (updatedVotes, state) {
+  let talk = _(updatedVotes).map('talks').flatten().filter({id: state.id}).first();
+  return {...state, attendees: talk.attendees};
+}
+
+function selectTalk (talkId, state) {
+  return state.id !== talkId ? {...state, selected: false} : {...state, selected: true};
+}
