@@ -56,16 +56,18 @@ describe('Slots Reducers', () => {
   });
 
   it('should handle UPDATE_VOTES', () => {
-    const updateVotesData = [
-      {
-        period: '8h - 9h',
-        talks: [{id: 1, attendees: 0}, {id: 2, attendees: 5}]
-      },
-      {
-        period: '9h - 10h',
-        talks: [{id: 3, attendees: 0}, {id: 4, attendees: 10}]
-      }
-    ];
+    const updateVotesData = {
+      slots: [
+        {
+          period: '8h - 9h',
+          talks: [{id: 1, attendees: 0}, {id: 2, attendees: 5}]
+        },
+        {
+          period: '9h - 10h',
+          talks: [{id: 3, attendees: 0}, {id: 4, attendees: 10}]
+        }
+      ]
+    };
 
     let newState = reducer(state, {
       type: 'UPDATE_VOTES',

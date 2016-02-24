@@ -2,12 +2,26 @@ import makeActionCreator from '../utils/actionCreator';
 
 const SELECT_TALK = 'SELECT_TALK';
 const SUBMIT_CHOOSEN_TALKS = 'SUBMIT_CHOOSEN_TALKS';
-const INIT_STATE = 'INIT_STATE';
 const UPDATE_VOTES = 'UPDATE_VOTES';
+const UPDATE_SESSION = 'UPDATE_SESSION';
+const START_SESSION = 'START_SESSION';
+const TERMINATE_SESSION = 'TERMINATE_SESSION';
 
 export const selectTalk = makeActionCreator(SELECT_TALK, 'period', 'talkId');
-export const initState = makeActionCreator(INIT_STATE, 'initState');
 export const updateVotes = makeActionCreator(UPDATE_VOTES, 'updateVotes');
+export const updateSession = makeActionCreator(UPDATE_SESSION, 'updateSession');
+export const startSession = () => {
+  return {
+    type: START_SESSION,
+    meta: {remote: true}
+  };
+};
+export const terminateSession = () => {
+  return {
+    type: TERMINATE_SESSION,
+    meta: {remote: true}
+  };
+};
 
 export const submitChoosenTalks = (choosenTalks) => {
   return {

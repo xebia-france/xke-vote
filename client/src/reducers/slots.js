@@ -6,8 +6,8 @@ export const slots = (state = [], action) => {
       return state.map(s =>
         slot(s, action)
       );
-    case 'INIT_STATE':
-      return action.initState.map(s => {
+    case 'UPDATE_SESSION':
+      return action.updateSession.slots.map(s => {
         return {
           ...s, talks: s.talks.map(t => {
             return {...t, selected: false};
@@ -50,7 +50,7 @@ const talk = (state, action) => {
     case 'SELECT_TALK':
       return selectTalk(action.talkId, state);
     case 'UPDATE_VOTES':
-      return updateAttendees(action.updateVotes, state);
+      return updateAttendees(action.updateVotes.slots, state);
     default:
       return state;
   }

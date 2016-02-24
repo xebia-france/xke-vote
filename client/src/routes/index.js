@@ -9,10 +9,12 @@ import { Route, IndexRoute } from 'react-router';
 import CoreLayout from 'components/CoreLayout';
 import ChooseSlots from 'components/ChooseSlotsView/ChooseSlots';
 import Votings from 'components/VotingResultsView/Votings';
+import Session from 'components/SessionView/Session';
 
 export default (
   <Route path='/' component={CoreLayout}>
     <IndexRoute component={ChooseSlots} />
     <Route path='results'component={Votings}/>
+    <Route path='session'component={Session}/>
   </Route>
 );

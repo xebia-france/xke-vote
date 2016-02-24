@@ -1,13 +1,20 @@
 import {setSlots, addAttendees} from './slots';
 import _ from 'lodash';
 
-export const reducer = (state = [], action) => {
+const defaultState = {session: {status: "UNKNOWN"}, slots: []};
+
+export const reducer = (state = defaultState, action) => {
   switch (action.type) {
-    case 'SET_SLOTS':
-      return setSlots(state, action.slots);
+    case 'START_SESSION':
+      var finalState = {...state, session: {id: null, status:"ACTIVE"}, slots: setSlots([], action.slots)};
+      console.log(finalState);
+      return finalState;
+      break;
+    case 'TERMINATE_SESSION':
+      return {...state, session: { id: null, status:"TERMINATE"}, slots: []};
       break;
     case 'SUBMIT_CHOOSEN_TALKS':
-      state.map(s => {
+      state.slots.map(s => {
         let selectedTalk = _(action.choosenTalks).filter({period: s.period}).first();
         if (selectedTalk !== undefined) {
           s.talks.map(t => {

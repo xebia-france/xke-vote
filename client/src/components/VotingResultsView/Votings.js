@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import TalkProgressBar from './TalkProgressBar';
 import AppBar from 'material-ui/lib/app-bar';
 import Paper from 'material-ui/lib/paper';
-import { updateVotes } from '../../actions/slotsActions';
+import {updateVotes} from '../../actions/slotsActions';
 
 const mapStateToProps = (state) => ({
   slots: state.slots

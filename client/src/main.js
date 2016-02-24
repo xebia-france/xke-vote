@@ -7,7 +7,7 @@ import Root from './components/containers/Root';
 import configureStore from './utils/configureStore';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import io from 'socket.io-client';
-import { initState, updateVotes } from './actions/slotsActions';
+import {updateVotes, updateSession} from './actions/slotsActions';
 
 injectTapEventPlugin();
 
@@ -19,14 +19,16 @@ const initialState = window.__INITIAL_STATE__;
 export const socket = io(`${location.protocol}//${location.hostname}:8082`);
 
 const store = configureStore({initialState, history, socket});
-socket.on('initState', state =>
-  store.dispatch(initState(state))
-);
 
 socket.on('updateVotes', state =>
   store.dispatch(updateVotes(state))
 );
 
+socket.on('updateSession', state =>
+  store.dispatch(updateSession(state))
+);
+
+// store.dispatch(setClientId(getClientId()));
 // Render the React application to the DOM
 ReactDOM.render(
   <Root history={history} routes={routes} store={store} socket={socket}/>,

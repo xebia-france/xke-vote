@@ -20,7 +20,7 @@ app.get('/slots', (req, res) => {
 });
 
 app.get('/session', (req, res) => {
-  if (session) {
+  if(session) {
     res.send(session);
   } else {
     res.sendStatus(204);
@@ -40,20 +40,33 @@ app.delete('/session', (req, res) => {
 app.start = (port) => {
   store = makeStore();
 
-  store.dispatch({
-    type: 'SET_SLOTS',
-    slots: slotsData
-  });
-
   let server = app.listen(port || 8082);
   io = socketIo(server);
   io.on('connection', (socket) => {
-    socket.emit('initState', store.getState());
     console.log('socket is on :-)');
+    io.emit('updateSession', store.getState());
     socket.on('action', (action) => {
-      store.dispatch(action);
-      if (action.type === 'SUBMIT_CHOOSEN_TALKS') {
-        io.emit('updateVotes', store.getState());
+      switch(action.type) {
+        case 'SUBMIT_CHOOSEN_TALKS':
+          store.dispatch(action);
+          io.emit('updateVotes', store.getState());
+          break;
+        case 'START_SESSION':
+          store.dispatch({
+            type: 'START_SESSION',
+            slots: slotsData
+          });
+          console.log(store.getState());
+          io.emit('updateSession', store.getState());
+          break;
+        case 'TERMINATE_SESSION':
+          store.dispatch({
+            type: 'TERMINATE_SESSION'
+          });
+          io.emit('updateSession', store.getState());
+          break;
+        default:
+          store.dispatch(action);
       }
     });
   });
