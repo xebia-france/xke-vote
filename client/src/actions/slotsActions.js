@@ -1,5 +1,5 @@
 import makeActionCreator from '../utils/actionCreator';
-
+import getClientId from '../utils/clientId';
 const SELECT_TALK = 'SELECT_TALK';
 const SUBMIT_CHOOSEN_TALKS = 'SUBMIT_CHOOSEN_TALKS';
 const UPDATE_VOTES = 'UPDATE_VOTES';
@@ -27,6 +27,7 @@ export const submitChoosenTalks = (choosenTalks) => {
   return {
     type: SUBMIT_CHOOSEN_TALKS,
     choosenTalks: choosenTalks,
+    voter: getClientId(),
     meta: {remote: true}
   };
 };

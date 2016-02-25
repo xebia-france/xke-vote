@@ -28,7 +28,6 @@ socket.on('updateSession', state =>
   store.dispatch(updateSession(state))
 );
 
-// store.dispatch(setClientId(getClientId()));
 // Render the React application to the DOM
 ReactDOM.render(
   <Root history={history} routes={routes} store={store} socket={socket}/>,
