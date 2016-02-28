@@ -1,5 +1,4 @@
 import expect from 'expect';
-import _ from 'lodash';
 import {session as reducer} from '../../src/reducers/session';
 
 describe('Session Reducers', () => {

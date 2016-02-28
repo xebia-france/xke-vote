@@ -7,12 +7,12 @@ const defaultState = {session: {status: "UNKNOWN"}, slots: [], voters: []};
 export const reducer = (state = defaultState, action) => {
   switch(action.type) {
     case 'START_SESSION':
-      var finalState = {...state, session: {id: uuid.v4(), status: "ACTIVE"}, slots: setSlots([], action.slots)};
+      var finalState = {session: {id: uuid.v4(), status: "ACTIVE"}, slots: setSlots([], action.slots), voters: []};
       console.log(finalState);
       return finalState;
       break;
     case 'TERMINATE_SESSION':
-      return {...state, session: {id: null, status: "TERMINATE"}, slots: [], voters: []};
+      return {session: {id: state.session.id, status: "TERMINATE"}, slots: [], voters: []};
       break;
     case 'SUBMIT_CHOOSEN_TALKS':
       updateAttendees(state.slots, action.choosenTalks);

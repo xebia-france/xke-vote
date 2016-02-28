@@ -7,7 +7,7 @@ import {slotsData} from './conf/slots.js';
 const app = module.exports = express();
 let io;
 let store;
-var session;
+let session;
 
 app.enable('trust proxy');
 
@@ -52,9 +52,11 @@ app.start = (port) => {
           io.emit('updateVotes', store.getState());
           break;
         case 'START_SESSION':
+          //Copie initial slots
+          var slots = JSON.parse(JSON.stringify(slotsData));
           store.dispatch({
             type: 'START_SESSION',
-            slots: slotsData
+            slots: slots
           });
           console.log(store.getState());
           io.emit('updateSession', store.getState());

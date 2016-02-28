@@ -18,7 +18,6 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(selectTalk(period, talkId));
   },
   submitChoosenTalks: (slots) => {
-
     dispatch(submitChoosenTalks(slots));
   }
 });
@@ -30,13 +29,14 @@ export const ChooseSlots = React.createClass({
       talks: PropTypes.array.isRequired
     }).isRequired).isRequired,
     selectTalk: PropTypes.func.isRequired,
-    submitChoosenTalks: PropTypes.func.isRequired
+    submitChoosenTalks: PropTypes.func.isRequired,
+    voters: PropTypes.array.isRequired
   },
-  render: function() {
+  render: function () {
     let { submitChoosenTalks, ...slots } = this.props;
     let alreadyVote = _(this.props.voters).find(voter => voter === getClientId()) !== undefined;
     let choiceComponent;
-    if(alreadyVote) {
+    if (alreadyVote) {
       choiceComponent = <label>Already Vote!</label>;
     } else {
       choiceComponent = <RaisedButton label='Submit Choices' primary onClick={() => submitChoosenTalks(choosenSlots(this.props.slots))}
@@ -61,10 +61,10 @@ export const ChooseSlots = React.createClass({
 });
 
 const choosenSlots = (slots) => {
-  if(slots) {
+  if (slots) {
     return _(slots).map(s => {
       let selectedTalk = s.talks.filter(t => t.selected)[0];
-      if(selectedTalk) {
+      if (selectedTalk) {
         return {
           period: s.period,
           talk: selectedTalk.id
