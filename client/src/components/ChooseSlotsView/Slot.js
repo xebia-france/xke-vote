@@ -23,7 +23,9 @@ export const Slot = ({ period, talks, onClick }) => (
       <List key={period} subheader={period} subheaderStyle={subHeaderList}>
         {talks.map(talk =>
           <div key={talk.id}>
-            <ListItem key={talk.id} onClick={() => onClick(period, talk.id)}
+            <ListItem key={talk.id}
+                      onTouchTap={() => onClick(period, talk.id)}
+                      onClick={() => onClick(period, talk.id)}
                       style={{backgroundColor: talk.selected ? colors.purple200 : colors.white}}
                       id='talk'
                       primaryText={talk.text}

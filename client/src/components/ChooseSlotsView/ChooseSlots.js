@@ -43,6 +43,7 @@ export const ChooseSlots = React.createClass({
     let choiceComponent;
     if (!alreadyVote) {
       choiceComponent = <FlatButton label='Submit Choices'
+                                    onTouchTap={() => submitChoosenTalks(choosenSlots(this.props.slots))}
                                     onClick={() => submitChoosenTalks(choosenSlots(this.props.slots))}/>;
     } else {
       goToResults();
