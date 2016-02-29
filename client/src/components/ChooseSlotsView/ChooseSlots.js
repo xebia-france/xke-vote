@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 import { selectTalk } from '../../actions/slotsActions';
 import { submitChoosenTalks } from '../../actions/slotsActions';
 import Slots from './Slots';
-import RaisedButton from 'material-ui/lib/raised-button';
+import FlatButton from 'material-ui/lib/flat-button';
 import AppBar from 'material-ui/lib/app-bar';
 import _ from 'lodash';
 import getClientId from '../../utils/clientId';
+import { push } from 'react-router-redux';
 
 const mapStateToProps = (state) => ({
   slots: state.slots,
@@ -19,6 +20,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   submitChoosenTalks: (slots) => {
     dispatch(submitChoosenTalks(slots));
+  },
+  goToResults: () => {
+    dispatch(push('/results'));
   }
 });
 
@@ -30,30 +34,29 @@ export const ChooseSlots = React.createClass({
     }).isRequired).isRequired,
     selectTalk: PropTypes.func.isRequired,
     submitChoosenTalks: PropTypes.func.isRequired,
+    goToResults: PropTypes.func.isRequired,
     voters: PropTypes.array.isRequired
   },
   render: function () {
-    let { submitChoosenTalks, ...slots } = this.props;
+    let { submitChoosenTalks, goToResults, ...slots } = this.props;
     let alreadyVote = _(this.props.voters).find(voter => voter === getClientId()) !== undefined;
     let choiceComponent;
-    if (alreadyVote) {
-      choiceComponent = <label>Already Vote!</label>;
+    if (!alreadyVote) {
+      choiceComponent = <FlatButton label='Submit Choices'
+                                    onClick={() => submitChoosenTalks(choosenSlots(this.props.slots))}/>;
     } else {
-      choiceComponent = <RaisedButton label='Submit Choices' primary onClick={() => submitChoosenTalks(choosenSlots(this.props.slots))}
-                                      style={{margin: 20}}/>;
+      goToResults();
     }
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <AppBar title='XKE Agenda' showMenuIconButton={false}/>
+          <AppBar title='XKE Agenda'
+                  showMenuIconButton={false}
+                  iconElementRight={choiceComponent}
+          />
         </div>
         <div className='row'>
           <Slots {...slots} />
-        </div>
-        <div className='row'>
-          <div className='col-lg-3'>
-            {choiceComponent}
-          </div>
         </div>
       </div>
     );
