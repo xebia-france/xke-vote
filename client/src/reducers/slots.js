@@ -3,6 +3,7 @@ import _ from 'lodash';
 export const slots = (state = [], action) => {
   switch (action.type) {
     case 'SELECT_TALK':
+    case 'REFRESH_SLOT':
       return state.map(s =>
         slot(s, action)
       );
@@ -26,6 +27,7 @@ export const slots = (state = [], action) => {
 const slot = (state, action) => {
   switch (action.type) {
     case 'SELECT_TALK':
+    case 'REFRESH_SLOT':
       if (state.period !== action.period) {
         return state;
       }
@@ -47,6 +49,8 @@ const slot = (state, action) => {
 
 const talk = (state, action) => {
   switch (action.type) {
+    case 'REFRESH_SLOT':
+      return unSelectTalk(state);
     case 'SELECT_TALK':
       return selectTalk(action.talkId, state);
     case 'UPDATE_VOTES':
@@ -63,4 +67,8 @@ function updateAttendees (updatedVotes, state) {
 
 function selectTalk (talkId, state) {
   return state.id !== talkId ? {...state, selected: false} : {...state, selected: true};
+}
+
+function unSelectTalk (state) {
+  return {...state, selected: false};
 }

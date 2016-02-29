@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Slot from './Slot';
 
-export const Slots = ({ slots, selectTalk }) => (
+export const Slots = ({ slots, selectTalk, refreshSlot }) => (
   <div>
     {slots.map(slot =>
       <div className='col-md-3'>
@@ -9,6 +9,7 @@ export const Slots = ({ slots, selectTalk }) => (
           key={slot.period}
           {...slot}
           onClick={selectTalk}
+          refreshSlot={refreshSlot}
           id='slots'
         />
       </div>

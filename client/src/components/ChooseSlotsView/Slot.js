@@ -19,10 +19,10 @@ const subHeaderList = {
   paddingLeft: 0
 };
 
-export const Slot = ({ period, talks, onClick }) => (
+export const Slot = ({ period, talks, onClick, refreshSlot }) => (
   <div>
     <Paper style={paperStyle} zDepth={2}>
-      <List key={period} subheader={<HeaderSlot period={period} />}
+      <List key={period} subheader={<HeaderSlot period={period} refreshSlot={refreshSlot} />}
             subheaderStyle={subHeaderList}>
         {talks.map(talk =>
           <div key={talk.id}>

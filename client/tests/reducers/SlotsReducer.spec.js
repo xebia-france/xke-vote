@@ -82,5 +82,27 @@ describe('Slots Reducers', () => {
 
   });
 
+  it('should handle REFRESH_SLOT', () => {
+    let newState = reducer(state, {
+      type: 'SELECT_TALK',
+      period: '8h - 9h',
+      talkId: 2
+    });
+
+    let updatedTalk = findTalk(newState, '8h - 9h', 2);
+
+    expect(updatedTalk.selected).toBe(true);
+
+    newState = reducer(state, {
+      type: 'REFRESH_SLOT',
+      period: '8h - 9h'
+    });
+
+    updatedTalk = findTalk(newState, '8h - 9h', 2);
+
+    expect(updatedTalk.selected).toBe(false);
+
+  });
+
 });
 

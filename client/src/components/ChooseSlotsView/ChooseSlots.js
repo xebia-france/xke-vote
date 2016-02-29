@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { selectTalk } from '../../actions/slotsActions';
-import { submitChoosenTalks } from '../../actions/slotsActions';
+import { submitChoosenTalks, refreshSlot } from '../../actions/slotsActions';
 import Slots from './Slots';
 import FlatButton from 'material-ui/lib/flat-button';
 import AppBar from 'material-ui/lib/app-bar';
@@ -17,6 +17,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   selectTalk: (period, talkId) => {
     dispatch(selectTalk(period, talkId));
+  },
+  refreshSlot: (period) => {
+    dispatch(refreshSlot(period));
   },
   submitChoosenTalks: (slots) => {
     dispatch(submitChoosenTalks(slots));
