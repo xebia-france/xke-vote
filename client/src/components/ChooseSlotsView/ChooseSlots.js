@@ -54,10 +54,11 @@ export const ChooseSlots = React.createClass({
           <AppBar title='XKE Agenda'
                   showMenuIconButton={false}
                   iconElementRight={choiceComponent}
+                  style={{position: 'fixed'}}
           />
         </div>
-        <div className='row'>
-          <Slots {...slots} />
+        <div className='row' style={{paddingTop: 60}}>
+          <Slots {...slots} style/>
         </div>
       </div>
     );

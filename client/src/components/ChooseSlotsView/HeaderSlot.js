@@ -12,14 +12,15 @@ export const HeaderSlot = ({ period }) => (
 
         </div>
         <div className='col-md-2 col-xs-2'>
-          <IconButton iconClassName='material-icons' tooltip='refresh' >clear</IconButton>
+          <IconButton iconClassName='material-icons' tooltip='refresh'>clear</IconButton>
         </div>
-      </div></div>
+      </div>
+    </div>
   </div>
 );
 
 HeaderSlot.propTypes = {
-    period: PropTypes.string.isRequired
+  period: PropTypes.string.isRequired
 };
 
 export default HeaderSlot;
