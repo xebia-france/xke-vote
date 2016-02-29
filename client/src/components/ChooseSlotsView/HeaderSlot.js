@@ -5,10 +5,10 @@ export const HeaderSlot = ({ period, refreshSlot }) => (
   <div className='container-fluid'>
     <div className='row'>
       <div>
-        <div className='col-md-6 col-xs-6'>
+        <div className='col-md-7 col-xs-7'>
           {period}
         </div>
-        <div className='col-md-3 col-xs-3'>
+        <div className='col-md-2 col-xs-2'>
 
         </div>
         <div className='col-md-2 col-xs-2'>

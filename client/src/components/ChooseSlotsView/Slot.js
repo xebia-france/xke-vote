@@ -32,11 +32,12 @@ export const Slot = ({ period, talks, onClick, refreshSlot }) => (
                       style={{backgroundColor: talk.selected ? colors.purple200 : colors.white}}
                       id='talk'
                       primaryText={talk.text}
+                      secondaryTextLines={2}
                       leftAvatar={
                       <Avatar
                          color={colors.white}
                          backgroundColor={getFondationStyle(talk.fondation).color}
-                         style={{fontSize: '9px', top: '-px'}}
+                         style={{fontSize: '9px'}}
                        >
                        {talk.fondation}
                       </Avatar>

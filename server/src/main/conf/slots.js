@@ -1,123 +1,98 @@
 export const slotsData = [
   {
-    period: '8h - 9h',
-    talks: [{
-      id: 1,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      fondation: 'Front',
-      attendees: 0
-    }, {
-      id: 2,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      fondation: 'Back',
-      attendees: 0
-    },
+    period: '13h45-15H45',
+    talks: [
+      {
+        id: 1,
+        text: 'FP 105: type class - Hands On',
+        fondation: 'Craft',
+        attendees: 0
+      },
+      {
+        id: 2,
+        text: 'Linux Namespaces - Demo',
+        fondation: 'Devops',
+        attendees: 0
+      },
       {
         id: 3,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-        fondation: 'Craft',
+        text: 'Hands-on: Intro à la 3D et realité virtuelle',
+        fondation: 'Divers',
         attendees: 0
       },
       {
         id: 4,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
+        text: 'Le test n\'est pas (qu\')une histoire de testeur!' +
+        ' && JIRA Portfolio : présentation de la planification agile.',
         fondation: 'Agile',
         attendees: 0
-      }
-    ]
+      },
+      {
+        id: 5,
+        text: 'Ansible hors des sentiers battus && Rundeck',
+        fondation: 'WeScale',
+        attendees: 0
+      }]
   },
   {
-    period: '9h - 10h',
-    talks: [{
-      id: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      fondation: 'Devops',
-      attendees: 0
-    }, {
-      id: 6,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      fondation: 'Cloud',
-      attendees: 0
-    },
+    period: '15h45-16H45',
+    talks: [
+      {
+        id: 6,
+        text: 'Comment aider son product owner à prioriser son backlog ?',
+        fondation: 'Agile',
+        attendees: 0
+      },
       {
         id: 7,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-        fondation: 'IoT',
+        text: ' les agents de la jam et Findtheflow.io',
+        fondation: 'Back',
         attendees: 0
       },
       {
         id: 8,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-        fondation: 'Mobile',
+        text: ' Live coding AureliaJS',
+        fondation: 'Front',
+        attendees: 0
+      },
+      {
+        id: 9,
+        text: 'REX sur Domotique',
+        fondation: 'IoT',
         attendees: 0
       }]
   },
   {
-    period: '10h - 11h',
-    talks: [{
-      id: 9,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      fondation: 'Cloud',
-      attendees: 0
-    }, {
-      id: 10,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      fondation: 'Craft',
-      attendees: 0
-    },
+    period: '16h45-18H45',
+    talks: [
+      {
+        id: 10,
+        text: 'Rédiger des User Stories en Gherkin',
+        fondation: 'Agile',
+        attendees: 0
+      },
       {
         id: 11,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-        fondation: 'Front',
+        text: 'Bataille Navale en Micro Services - Hands-On',
+        fondation: 'Craft',
         attendees: 0
       },
       {
         id: 12,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-        fondation: 'Front',
-        attendees: 0
-      }]
-  },
-  {
-    period: '11h - 0h',
-    talks: [{
-      id: 13,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      fondation: 'Agile',
-      attendees: 0
-    }, {
-      id: 14,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      fondation: 'Back',
-      attendees: 0
-    },
-      {
-        id: 15,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-        fondation: 'Cloud',
+        text: 'Hands-On - R, ou comprendre avec quoi travaillent vos amis les Data Scientists',
+        fondation: 'Data',
         attendees: 0
       },
       {
-        id: 16,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non est dui. Nulla fermentum pretium augue ut faucibus. Ut ultrices posuere.',
-        fondation: 'Craft',
+        id: 13,
+        text: 'Hand\'s on Docker Swarm',
+        fondation: 'Devops',
+        attendees: 0
+      },
+      {
+        id: 14,
+        text: 'Demo - Ember 2.0',
+        fondation: 'Front',
         attendees: 0
       }]
-  }
-];
+  }];
