@@ -5,6 +5,7 @@ import Avatar from 'material-ui/lib/avatar';
 import styles from 'material-ui/lib/styles';
 import Paper from 'material-ui/lib/paper';
 import {getFondationStyle} from '../fondations.js';
+import HeaderSlot from './HeaderSlot';
 
 const colors = styles.Colors;
 
@@ -14,13 +15,15 @@ const paperStyle = {
 
 const subHeaderList = {
   fontSize: '1.5em',
-  fontStyle: 'bold'
+  fontStyle: 'bold',
+  paddingLeft: 0
 };
 
 export const Slot = ({ period, talks, onClick }) => (
   <div>
     <Paper style={paperStyle} zDepth={2}>
-      <List key={period} subheader={period} subheaderStyle={subHeaderList}>
+      <List key={period} subheader={<HeaderSlot period={period} />}
+            subheaderStyle={subHeaderList}>
         {talks.map(talk =>
           <div key={talk.id}>
             <ListItem key={talk.id}
