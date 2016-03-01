@@ -35,7 +35,7 @@ export const Session = React.createClass({
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <AppBar title='XKE Agenda' showMenuIconButton={false}/>
+          <AppBar title='XKE Agenda' showMenuIconButton={false} style={{backgroundColor: '#6B205F'}}/>
         </div>
         <div className='row'>
           <div className='col-lg-3'>

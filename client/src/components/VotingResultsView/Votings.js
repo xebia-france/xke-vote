@@ -34,7 +34,7 @@ export const Votings = React.createClass({
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <AppBar title='Resultats des votes' showMenuIconButton={false}/>
+          <AppBar title='Resultats des votes' showMenuIconButton={false} style={{backgroundColor: '#6B205F'}}/>
         </div>
         <div className='row'>
           {slots.map(slot =>

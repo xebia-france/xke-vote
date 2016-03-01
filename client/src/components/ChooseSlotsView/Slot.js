@@ -28,8 +28,9 @@ const avatarFoundationStyle = {
 
 const talkStyle = (talk) => {
   return {
-    backgroundColor: talk.selected ? colors.purple200 : colors.white,
-    textAlign: 'justify'
+    backgroundColor: talk.selected ? '#6B205F' : colors.white,
+    textAlign: 'justify',
+    color: talk.selected ? colors.white : colors.black
   };
 };
 
