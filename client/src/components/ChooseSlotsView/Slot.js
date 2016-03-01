@@ -13,23 +13,37 @@ const paperStyle = {
   margin: 20
 };
 
-const subHeaderList = {
+const subHeaderListStyle = {
   fontSize: '1.5em',
   fontStyle: 'bold',
   paddingLeft: 0
+};
+
+const avatarFoundationStyle = {
+  fontSize: '9px',
+  position: 'absolute',
+  top: '50%',
+  transform: 'translateY(-50%)'
+};
+
+const talkStyle = (talk) => {
+  return {
+    backgroundColor: talk.selected ? colors.purple200 : colors.white,
+    textAlign: 'justify'
+  };
 };
 
 export const Slot = ({ period, talks, onClick, refreshSlot }) => (
   <div>
     <Paper style={paperStyle} zDepth={2}>
       <List key={period} subheader={<HeaderSlot period={period} refreshSlot={refreshSlot} />}
-            subheaderStyle={subHeaderList}>
+            subheaderStyle={subHeaderListStyle}>
         {talks.map(talk =>
           <div key={talk.id}>
             <ListItem key={talk.id}
                       onTouchTap={() => onClick(period, talk.id)}
                       onClick={() => onClick(period, talk.id)}
-                      style={{backgroundColor: talk.selected ? colors.purple200 : colors.white}}
+                      style={talkStyle(talk)}
                       id='talk'
                       primaryText={talk.text}
                       secondaryTextLines={2}
@@ -37,7 +51,7 @@ export const Slot = ({ period, talks, onClick, refreshSlot }) => (
                       <Avatar
                          color={colors.white}
                          backgroundColor={getFondationStyle(talk.fondation).color}
-                         style={{fontSize: '9px'}}
+                         style={avatarFoundationStyle}
                        >
                        {talk.fondation}
                       </Avatar>
