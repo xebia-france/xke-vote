@@ -44,7 +44,7 @@ app.start = (port) => {
   io = socketIo(server);
   io.on('connection', (socket) => {
     console.log('socket is on :-)');
-    io.emit('updateSession', store.getState());
+    socket.emit('updateSession', store.getState());
     socket.on('action', (action) => {
       switch(action.type) {
         case 'SUBMIT_CHOOSEN_TALKS':
