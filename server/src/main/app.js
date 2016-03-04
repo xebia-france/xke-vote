@@ -43,12 +43,13 @@ app.start = (port) => {
   let server = app.listen(port || 8082);
   io = socketIo(server);
   io.on('connection', (socket) => {
-    console.log('socket is on :-)');
+    console.log('new connection by ' + socket.id);
     socket.emit('updateSession', store.getState());
     socket.on('action', (action) => {
       switch(action.type) {
         case 'SUBMIT_CHOOSEN_TALKS':
           store.dispatch(action);
+          console.log('SUBMIT_CHOOSEN_TAKS by ' + socket.id);
           io.emit('updateVotes', store.getState());
           break;
         case 'START_SESSION':
@@ -59,12 +60,14 @@ app.start = (port) => {
             slots: slots
           });
           console.log(store.getState());
+          console.log('START_SESSION by ' + socket.id);
           io.emit('updateSession', store.getState());
           break;
         case 'TERMINATE_SESSION':
           store.dispatch({
             type: 'TERMINATE_SESSION'
           });
+          console.log('TERMINATE_SESSION by ' + socket.id);
           io.emit('updateSession', store.getState());
           break;
         default:
