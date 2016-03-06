@@ -16,8 +16,8 @@ export const slotsData = [
       },
       {
         id: 3,
-        text: 'Hands-on: Intro à la 3D et realité virtuelle',
-        fondation: 'Divers',
+        text: 'Hands-On - R, ou comprendre avec quoi travaillent vos amis les Data Scientists',
+        fondation: 'Data',
         attendees: 0
       },
       {
@@ -79,20 +79,20 @@ export const slotsData = [
       },
       {
         id: 12,
-        text: 'Hands-On - R, ou comprendre avec quoi travaillent vos amis les Data Scientists',
-        fondation: 'Data',
-        attendees: 0
-      },
-      {
-        id: 13,
         text: 'Hand\'s on Docker Swarm',
         fondation: 'Devops',
         attendees: 0
       },
       {
-        id: 14,
+        id: 13,
         text: 'Demo - Ember 2.0',
         fondation: 'Front',
+        attendees: 0
+      },
+      {
+        id: 14,
+        text: 'lightbend',
+        fondation: 'Divers',
         attendees: 0
       }]
   }];
