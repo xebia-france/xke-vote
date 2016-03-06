@@ -5,7 +5,7 @@ import {reducer} from '../src/main/core/reducer';
 describe('Slots Reducers', () => {
 
   it('should handle SUBMIT_CHOOSEN_TALKS', () => {
-    let state = [{
+    let state = {session: {status: "ACTIVE"}, voters: [],slots: [{
       period: '8h - 9h',
       talks: [{
         id: 1,
@@ -33,14 +33,14 @@ describe('Slots Reducers', () => {
           text: 'slot4',
           attendees: 0
         }]
-      }];
+      }]};
 
     state = reducer(state, {
       type: 'SUBMIT_CHOOSEN_TALKS',
       choosenTalks: [{period: '8h - 9h', talk: 1}, {period: '9h - 10h', talk: 4}]
     });
 
-    let updatedTalk = _(state)
+    let updatedTalk = _(state.slots)
         .filter(s => s.period === '8h - 9h')
         .map(s => s.talks)
         .flatten()

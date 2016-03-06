@@ -6,7 +6,7 @@ describe('Test application server', function() {
   var app;
 
   beforeEach(function() {
-    app = require('../main/app');
+    app = require('../src/main/app');
   });
 
   it('expect start server', function() {

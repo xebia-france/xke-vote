@@ -15,7 +15,7 @@ export const reducer = (state = defaultState, action) => {
       return {session: {id: state.session.id, status: "TERMINATE"}, slots: [], voters: []};
       break;
     case 'SUBMIT_CHOOSEN_TALKS':
-      if (!_.contains(state.voters, action.voter)) {
+      if (!_.contains(state.voters, action.voter) || !action.checkVote) {
         updateAttendees(state.slots, action.choosenTalks);
         return {...state, voters: [...state.voters, action.voter]};
       } else {

@@ -16,5 +16,6 @@ export default (
     <IndexRoute component={ChooseSlots} />
     <Route path='results'component={Votings}/>
     <Route path='session'component={Session}/>
+    <Route path='free' checkVote={false} component={ChooseSlots}/>
   </Route>
 );

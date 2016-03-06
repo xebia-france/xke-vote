@@ -25,10 +25,11 @@ export const terminateSession = () => {
   };
 };
 
-export const submitChoosenTalks = (choosenTalks) => {
+export const submitChoosenTalks = (choosenTalks, checkVote) => {
   return {
     type: SUBMIT_CHOOSEN_TALKS,
     choosenTalks: choosenTalks,
+    checkVote: checkVote,
     voter: getClientId(),
     meta: {remote: true}
   };

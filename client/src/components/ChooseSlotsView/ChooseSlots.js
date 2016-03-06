@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch) => ({
   refreshSlot: (period) => {
     dispatch(refreshSlot(period));
   },
-  submitChoosenTalks: (slots) => {
-    dispatch(submitChoosenTalks(slots));
+  submitChoosenTalks: (slots, checkVote) => {
+    dispatch(submitChoosenTalks(slots, checkVote));
   },
   goToResults: () => {
     dispatch(push('/results'));
@@ -38,16 +38,23 @@ export const ChooseSlots = React.createClass({
     selectTalk: PropTypes.func.isRequired,
     submitChoosenTalks: PropTypes.func.isRequired,
     goToResults: PropTypes.func.isRequired,
-    voters: PropTypes.array.isRequired
+    voters: PropTypes.array.isRequired,
+    route: PropTypes.object.isRequired
   },
   render: function () {
     let { submitChoosenTalks, goToResults, ...slots } = this.props;
     let alreadyVote = _(this.props.voters).find(voter => voter === getClientId()) !== undefined;
+    let checkAlreadyVote = this.props.route.checkVote !== undefined ? this.props.route.checkVote : true;
+    console.log('check: ' + this.props.route.checkVote);
+    console.log('check: ' + checkAlreadyVote);
     let choiceComponent;
-    if (!alreadyVote) {
+    if (!checkAlreadyVote || !alreadyVote) {
       choiceComponent = <FlatButton label='Submit Choices'
-                                    onTouchTap={() => submitChoosenTalks(choosenSlots(this.props.slots))}
-                                    onClick={() => submitChoosenTalks(choosenSlots(this.props.slots))}/>;
+                                    onTouchTap={() => {
+                                      console.log('onTouch');
+                                      submitChoosenTalks(choosenSlots(this.props.slots), checkAlreadyVote);
+                                    }
+                                    }/>;
     } else {
       goToResults();
     }
