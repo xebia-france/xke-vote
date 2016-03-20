@@ -1,21 +1,13 @@
-import expect from 'expect';
-import expectJSX from 'expect-jsx';
 import React from 'react';
-import {wrap} from '../wrapper';
-import ShallowTestUtils from 'react-shallow-testutils';
-import _ from 'lodash';
-import TestUtils from 'react-addons-test-utils';
-import { bindActionCreators } from 'redux';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import spy from 'expect';
 
 import { Slot } from 'components/ChooseSlotsView/Slot';
 import ListItem from 'material-ui/lib/lists/list-item';
 import Avatar from 'material-ui/lib/avatar';
 import List from 'material-ui/lib/lists/list';
 import styles from 'material-ui/lib/styles';
-
-/* Those steps are demonstrating Shallow testing for React Components */
-
-expect.extend(expectJSX);
 
 const colors = styles.Colors;
 
@@ -27,46 +19,52 @@ function setup() {
       text: 'text',
       fondation: 'Back',
       selected: false
-    }],
-    onClick: expect.createSpy()
+    },
+      {
+        id: 3,
+        text: 'text',
+        fondation: 'Craft',
+        selected: false
+      }],
+    onClick: spy.createSpy()
   };
 
-  let renderer = TestUtils.createRenderer();
-  let component = renderer.render(<Slot {...props} />);
-  let output = renderer.getRenderOutput();
+  let output = shallow(<Slot {...props} />);
 
   return {
     props,
-    output,
-    renderer,
-    component
+    output
   };
 }
 
-describe('[NATIVE SHALLOW] Slots components', () => {
+describe('Slots components', () => {
   it('Should include an <ul> containing slots and talks', function () {
     const { output } = setup();
 
-    let talk = ShallowTestUtils.findWithType(output, ListItem);
+    let talk = output.find(ListItem);
 
-    expect(talk.key).toBe('2');
-    expect(talk.props.primaryText).toBe('text');
+    expect(talk).to.have.length(2);
+    expect(talk.first().prop('primaryText')).to.equal('text');
 
-    expect(talk.props.leftAvatar.props.children).toBe('Back');
-    expect(talk.props.leftAvatar.props.backgroundColor).toBe(colors.red400);
+    let avatar = talk.first().prop('leftAvatar');
+
+    console.log(avatar.props);
+    expect(avatar.props.backgroundColor).to.equal(colors.red400);
+    expect(avatar.props.children).to.equal('Back');
   });
 
   describe('Submitting choosen talks', function () {
 
     it('should send choosen talks', function () {
       const { output, props } = setup();
-      let submitTalk = ShallowTestUtils.findWithType(output, ListItem);
 
-      expect(props.onClick.calls.length).toBe(0);
+      let submitTalk = output.find(ListItem).first();
 
-      submitTalk.props.onClick();
+      expect(props.onClick.calls.length).to.equal(0);
 
-      expect(props.onClick.calls.length).toBe(1);
+      submitTalk.simulate('click');
+
+      expect(props.onClick.calls.length).to.equal(1);
     });
   });
 });

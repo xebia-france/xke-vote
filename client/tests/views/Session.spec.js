@@ -23,7 +23,7 @@ function setup(status) {
   };
 }
 
-describe('[ENZYME SHALLOW] Session components', () => {
+describe('Session components', () => {
   it('Should include a <RaisedButton> to start a session', function () {
     const { output, props } = setup("UNKNOWN");
     let sessionButton = output.find(RaisedButton);
