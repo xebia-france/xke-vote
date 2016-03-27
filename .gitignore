@@ -2,9 +2,6 @@ node_modules
 .idea
 *.iml
 *.log
-<<<<<<< 066661e8e772216245e3ca984892345394fbb9ec
 *.log.*
 *.out
-=======
 server/build
->>>>>>> add transformation build step
