@@ -13,7 +13,7 @@ export const HeaderSlot = ({ period, refreshSlot }) => (
           <IconButton iconClassName='material-icons'
                       onTouchTap={() => refreshSlot(period)}
                       onClick={() => refreshSlot(period)}
-          >undo</IconButton>
+          >refresh</IconButton>
         </div>
     </div>
   </div>

@@ -45,8 +45,6 @@ export const ChooseSlots = React.createClass({
     let { submitChoosenTalks, goToResults, ...slots } = this.props;
     let alreadyVote = _(this.props.voters).find(voter => voter === getClientId()) !== undefined;
     let checkAlreadyVote = this.props.route.checkVote !== undefined ? this.props.route.checkVote : true;
-    console.log('check: ' + this.props.route.checkVote);
-    console.log('check: ' + checkAlreadyVote);
     let choiceComponent;
     if (!checkAlreadyVote || !alreadyVote) {
       choiceComponent = <FlatButton label='Submit Choices'
