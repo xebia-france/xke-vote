@@ -50,6 +50,7 @@ export const Votings = React.createClass({
                       text={talk.text}
                       attendees={talk.attendees}
                       fondation={talk.fondation}
+                      room={talk.room}
                     />
                   )}
                 </div>

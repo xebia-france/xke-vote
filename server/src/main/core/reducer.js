@@ -1,4 +1,5 @@
 import {setSlots, updateAttendees} from './slots';
+import {rooms} from '../conf/rooms';
 import _ from 'lodash';
 import uuid from 'uuid';
 
@@ -8,11 +9,10 @@ export const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case 'START_SESSION':
       var finalState = {session: {id: uuid.v4(), status: "ACTIVE"}, slots: setSlots([], action.slots), voters: []};
-      console.log(finalState);
       return finalState;
       break;
     case 'TERMINATE_SESSION':
-      return {session: {id: state.session.id, status: "TERMINATE"}, slots: [], voters: []};
+      return {...state, slots: chooseRooms(state.slots), session: {id: state.session.id, status: "TERMINATE"}};
       break;
     case 'SUBMIT_CHOOSEN_TALKS':
       if (!_.contains(state.voters, action.voter) || !action.checkVote) {
@@ -25,6 +25,16 @@ export const reducer = (state = defaultState, action) => {
       break;
   }
   return state;
+};
+
+const chooseRooms = (slots) => {
+  return slots.map(s => {
+    var roomsByPriority = _.sortBy(rooms, 'priority').reverse();
+    var talks = _(s.talks).sortBy('id').sortBy('attendees').value().reverse();
+    return {...s, talks: talks.map(t => {
+      return {...t, room: roomsByPriority.pop().name};
+    })};
+  });
 };
 
 export default reducer;

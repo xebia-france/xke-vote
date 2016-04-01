@@ -49,5 +49,6 @@ describe('Slots Reducers', () => {
 
     expect(updatedTalk.attendees).toBe(1);
 
-  })
+  });
+
 });

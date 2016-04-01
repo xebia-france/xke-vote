@@ -11,7 +11,7 @@ const style = {
   margin: 10
 };
 
-export const TalkProgressBar = ({ text, attendees, fondation }) => (
+export const TalkProgressBar = ({ text, attendees, fondation, room }) => (
   <div className='container-fluid'>
     <div className='row ' style={style}>
       <div className='col-md-1'>
@@ -27,6 +27,7 @@ export const TalkProgressBar = ({ text, attendees, fondation }) => (
         <div className='row'>
           <div className='col-md-8'>
             {text}
+            <div style={{fontWeight: 'bold'}}>Salle : {room}</div>
           </div>
           <div className='col-md-12'>
             <LinearProgress mode='determinate'
