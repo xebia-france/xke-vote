@@ -1,98 +1,78 @@
 export const slotsData = [
   {
-    period: '13h45-15H45',
+    period: '14h15-16H15',
     talks: [
       {
         id: 1,
-        text: 'FP 105: type class - Hands On',
-        fondation: 'Craft',
-        attendees: 0
-      },
-      {
-        id: 2,
-        text: 'Linux Namespaces - Demo',
-        fondation: 'Devops',
-        attendees: 0
-      },
-      {
-        id: 3,
-        text: 'Hands-On - R, ou comprendre avec quoi travaillent vos amis les Data Scientists',
+        text: 'HandsOn - Prise en main de Redis et Sentinel',
         fondation: 'Data',
         attendees: 0
       },
       {
-        id: 4,
-        text: 'Le test n\'est pas (qu\')une histoire de testeur!' +
-        ' && JIRA Portfolio : présentation de la planification agile.',
-        fondation: 'Agile',
+        id: 2,
+        text: 'HandsOn - Sensor app with Kotlin (Android) and big data usage',
+        fondation: 'Mobile',
         attendees: 0
       },
       {
-        id: 5,
-        text: 'Ansible hors des sentiers battus && Rundeck',
-        fondation: 'WeScale',
+        id: 3,
+        text: 'Rex - Présentation du projet Orleans + Table ronde sur les architectures microservices en présence de Microsoft',
+        fondation: 'Back',
+        attendees: 0
+      },
+      {
+        id: 4,
+        text: 'Hands-on - Intro à la 3D et réalité virtuelle',
+        fondation: 'Divers',
         attendees: 0
       }]
   },
   {
-    period: '15h45-16H45',
+    period: '16H15-17H15',
     talks: [
       {
+        id: 5,
+        text: 'Formal - KinTribe Gamified',
+        fondation: 'Divers',
+        attendees: 0
+      },
+      {
         id: 6,
-        text: 'Comment aider son product owner à prioriser son backlog ?',
+        text: '[BackToBasics] AgileGame : Artists and Specifiers',
         fondation: 'Agile',
         attendees: 0
       },
       {
         id: 7,
-        text: ' les agents de la jam et Findtheflow.io',
-        fondation: 'Back',
-        attendees: 0
-      },
-      {
-        id: 8,
-        text: ' Live coding AureliaJS',
-        fondation: 'Front',
-        attendees: 0
-      },
-      {
-        id: 9,
-        text: 'REX sur Domotique',
-        fondation: 'IoT',
-        attendees: 0
-      }]
-  },
-  {
-    period: '16h45-18H45',
-    talks: [
-      {
-        id: 10,
-        text: 'Rédiger des User Stories en Gherkin',
-        fondation: 'Agile',
-        attendees: 0
-      },
-      {
-        id: 11,
-        text: 'Bataille Navale en Micro Services - Hands-On',
+        text: 'Demo - Tout est une question de style',
         fondation: 'Craft',
         attendees: 0
       },
       {
-        id: 12,
-        text: 'Hand\'s on Docker Swarm',
+        id: 8,
+        text: 'Devops pour les nuls',
         fondation: 'Devops',
         attendees: 0
-      },
+      }]
+  },
+  {
+    period: '17h15-18H15',
+    talks: [
       {
-        id: 13,
-        text: 'Demo - Ember 2.0',
-        fondation: 'Front',
+        id: 9,
+        text: 'Retex Atelier d\'identification de Value Stream',
+        fondation: 'Agile',
+        attendees: 0
+      },{
+        id: 10,
+        text: 'Formal - FP 106: Monoides et ensemble',
+        fondation: 'Craft',
         attendees: 0
       },
       {
-        id: 14,
-        text: 'lightbend',
-        fondation: 'Divers',
+        id: 11,
+        text: '[Live-Coding] GruntJs-in-Action(30 min)+[Live-Coding]Vue.js(30 min)',
+        fondation: 'Front',
         attendees: 0
       }]
   }];
