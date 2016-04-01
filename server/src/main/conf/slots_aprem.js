@@ -71,7 +71,7 @@ export const slotsData = [
       },
       {
         id: 11,
-        text: '[Live-Coding] GruntJs-in-Action(30 min)+[Live-Coding]Vue.js(30 min)',
+        text: '[Live-Coding] GruntJs-in-Action(30 min) + [Live-Coding] Vue.js(30 min)',
         fondation: 'Front',
         attendees: 0
       }]
