@@ -25,6 +25,12 @@ export const slotsData = [
         text: 'Hands-on - Intro à la 3D et réalité virtuelle',
         fondation: 'Divers',
         attendees: 0
+      },
+      {
+        id: 12,
+        text: 'Bootcamp - accueil nouveaux arrivants',
+        fondation: 'Divers',
+        attendees: 0
       }]
   },
   {
@@ -71,7 +77,7 @@ export const slotsData = [
       },
       {
         id: 11,
-        text: '[Live-Coding] GruntJs-in-Action(30 min) + [Live-Coding] Vue.js(30 min)',
+        text: '[Live-Coding] Vue.js(30 min)',
         fondation: 'Front',
         attendees: 0
       }]

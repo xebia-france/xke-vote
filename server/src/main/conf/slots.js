@@ -1,6 +1,6 @@
 export const slotsData = [
   {
-    period: '10h-11h',
+    period: '10h15-11h15',
     talks: [
       {
         id: 1,
