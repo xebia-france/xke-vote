@@ -31,9 +31,18 @@ const chooseRooms = (slots) => {
   return slots.map(s => {
     var roomsByPriority = _.sortBy(rooms, 'priority').reverse();
     var talks = _(s.talks).sortBy('id').sortBy('attendees').value().reverse();
-    return {...s, talks: talks.map(t => {
-      return {...t, room: roomsByPriority.pop().name};
-    })};
+    return {
+      ...s, talks: talks.map(t => {
+        let selectedRoom;
+        if (_.isUndefined(t.room)) {
+          selectedRoom = roomsByPriority.pop().name;
+        } else {
+          selectedRoom = t.room;
+          _.remove(roomsByPriority, (r) => r.name === selectedRoom);
+        }
+        return {...t, room: selectedRoom};
+      })
+    };
   });
 };
 

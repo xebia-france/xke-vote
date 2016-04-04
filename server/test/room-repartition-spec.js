@@ -60,6 +60,26 @@ describe('Slots Reducers', () => {
     expect(findSlot(state.slots, '8h - 9h', 3).room).toBe('Montmartre');
   });
 
+  it('should handle room repartition when some session has already a room indicated', () => {
+    let state = {
+      session: {status: "ACTIVE"}, voters: [], slots: [
+        {
+          period: '8h - 9h',
+          talks: [{id: 1, text: 'slot1', selected: false, attendees: 5},
+            {id: 2, text: 'slot2', selected: false, attendees: 50, room: 'Montmartre'},
+            {id: 3, text: 'slot3', selected: false, attendees: 15}]
+        }
+      ]
+    };
+
+    state = reducer(state, {
+      type: 'TERMINATE_SESSION'
+    });
+
+    expect(findSlot(state.slots, '8h - 9h', 1).room).toBe('Haussman');
+    expect(findSlot(state.slots, '8h - 9h', 2).room).toBe('Montmartre');
+    expect(findSlot(state.slots, '8h - 9h', 3).room).toBe('Monceau');
+  });
 
   const findSlot = (slots, period, id) => {
     return _(slots)
