@@ -1,36 +1,78 @@
 export const slotsData = [
   {
-    period: '10h15-11h15',
+    period: '14h15-16H15',
     talks: [
       {
         id: 1,
-        text: '[BackToBasics] Scrumban in a nutshell',
-        fondation: 'Agile',
+        text: 'HandsOn - Prise en main de Redis et Sentinel',
+        fondation: 'Data',
         attendees: 0
       },
       {
         id: 2,
-        text: 'DD over TDD',
-        fondation: 'Craft',
+        text: 'HandsOn - Sensor app with Kotlin (Android) and big data usage',
+        fondation: 'Mobile',
         attendees: 0
       },
       {
         id: 3,
-        text: 'Formal/Demo - De l\'âge de pierre des modules JS au rayon laser avec Webpack',
-        fondation: 'Front',
+        text: 'Rex - Présentation du projet Orleans + Table ronde sur les architectures microservices en présence de Microsoft',
+        fondation: 'Back',
         attendees: 0
       },
       {
         id: 4,
-        text: 'Conférence - A la découverte du service discovery',
-        fondation: 'DevOps',
+        text: 'Hands-on - Intro à la 3D et réalité virtuelle',
+        fondation: 'Divers',
         attendees: 0
       },
       {
-        id: 5,
-        text: 'Présentation Couchbase Mobile',
-        fondation: 'Mobile',
+        id: 12,
+        text: 'Bootcamp - accueil nouveaux arrivants',
+        fondation: 'Divers',
         attendees: 0
-      }
-    ]
+      }]
+  },
+  {
+    period: '16H15-17H15',
+    talks: [
+      {
+        id: 5,
+        text: 'Formal - KinTribe Gamified',
+        fondation: 'Divers',
+        attendees: 0
+      },
+      {
+        id: 6,
+        text: '[BackToBasics] AgileGame : Artists and Specifiers',
+        fondation: 'Agile',
+        attendees: 0
+      },
+      {
+        id: 7,
+        text: 'Devops pour les nuls',
+        fondation: 'Devops',
+        attendees: 0
+      }]
+  },
+  {
+    period: '17h15-18H15',
+    talks: [
+      {
+        id: 8,
+        text: 'Retex Atelier d\'identification de Value Stream',
+        fondation: 'Agile',
+        attendees: 0
+      },{
+        id: 9,
+        text: 'Formal - FP 106: Monoides et ensemble',
+        fondation: 'Craft',
+        attendees: 0
+      },
+      {
+        id: 10,
+        text: '[Live-Coding] Vue.js(30 min)',
+        fondation: 'Front',
+        attendees: 0
+      }]
   }];
