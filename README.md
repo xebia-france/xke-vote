@@ -3,13 +3,13 @@
 ##Démarrer l'appli 
 
 ### Client 
-cd client 
-npm install
-npm start
+* cd client 
+* npm install
+* npm start
 
 ### Server
 
-cd server 
-npm install
-npm run build
-npm start
+* cd server 
+* npm install
+* npm run build
+* npm start
