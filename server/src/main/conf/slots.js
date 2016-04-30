@@ -1,78 +1,36 @@
 export const slotsData = [
   {
-    period: '14h15-16H15',
+    period: '10h45-11h40',
     talks: [
       {
         id: 1,
-        text: 'HandsOn - Prise en main de Redis et Sentinel',
-        fondation: 'Data',
+        text: '[Demo] Kodo Kojo',
+        fondation: 'Divers',
         attendees: 0
       },
       {
         id: 2,
-        text: 'HandsOn - Sensor app with Kotlin (Android) and big data usage',
-        fondation: 'Mobile',
+        text: '[REX] Lora/LoraWan',
+        fondation: 'Divers',
         attendees: 0
       },
       {
         id: 3,
-        text: 'Rex - Présentation du projet Orleans + Table ronde sur les architectures microservices en présence de Microsoft',
-        fondation: 'Back',
+        text: 'Testing React & Redux',
+        fondation: 'Front',
         attendees: 0
       },
       {
         id: 4,
-        text: 'Hands-on - Intro à la 3D et réalité virtuelle',
-        fondation: 'Divers',
+        text: '[BackToBasics] Les 5 questions con(tre) l\'agilité et comment y répondre',
+        fondation: 'Agile',
         attendees: 0
       },
-      {
-        id: 12,
-        text: 'Bootcamp - accueil nouveaux arrivants',
-        fondation: 'Divers',
-        attendees: 0
-      }]
-  },
-  {
-    period: '16H15-17H15',
-    talks: [
       {
         id: 5,
-        text: 'Formal - KinTribe Gamified',
-        fondation: 'Divers',
-        attendees: 0
-      },
-      {
-        id: 6,
-        text: '[BackToBasics] AgileGame : Artists and Specifiers',
-        fondation: 'Agile',
-        attendees: 0
-      },
-      {
-        id: 7,
-        text: 'Devops pour les nuls',
-        fondation: 'Devops',
-        attendees: 0
-      }]
-  },
-  {
-    period: '17h15-18H15',
-    talks: [
-      {
-        id: 8,
-        text: 'Retex Atelier d\'identification de Value Stream',
-        fondation: 'Agile',
-        attendees: 0
-      },{
-        id: 9,
-        text: 'Formal - FP 106: Monoides et ensemble',
+        text: '[Demo] Tout est une question de style',
         fondation: 'Craft',
         attendees: 0
-      },
-      {
-        id: 10,
-        text: '[Live-Coding] Vue.js(30 min)',
-        fondation: 'Front',
-        attendees: 0
-      }]
+      }
+    ]
   }];
