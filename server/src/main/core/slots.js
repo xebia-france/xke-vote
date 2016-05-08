@@ -4,13 +4,6 @@ export function setSlots(state, slots) {
   return [...state, ...slots];
 }
 
-export function addAttendees (talk) {
-  return talk;
-/*
-  return {...talk, attendees: talk.attendees++};
-*/
-}
-
 export function updateAttendees(state, choosenTalks){
   state.map(s => {
     let selectedTalk = _(choosenTalks).filter({period: s.period}).first();
