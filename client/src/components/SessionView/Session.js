@@ -10,8 +10,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  startSession: () => {
-    dispatch(startSession());
+  startSession: (moment) => {
+    dispatch(startSession(moment));
   },
   terminateSession: () => {
     dispatch(terminateSession());
@@ -30,7 +30,8 @@ export const Session = React.createClass({
     if (this.props.session.status === 'ACTIVE') {
       sessionButton = <RaisedButton primary label='Terminate Session' onClick={() => terminateSession()}/>;
     } else {
-      sessionButton = <RaisedButton primary label='Start Session' onClick={() => startSession()}/>;
+      sessionButton = <div><RaisedButton primary label='Start Morning Session' onClick={() => startSession('am')}/>
+        <RaisedButton primary label='Start Afternoon Session' onClick={() => startSession('pm')}/></div>;
     }
     return (
       <div className='container-fluid'>

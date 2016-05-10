@@ -51,4 +51,45 @@ describe('Slots Reducers', () => {
 
   });
 
+  it('should start a new Session', () => {
+    let slots = {am: [{
+      period: '8h - 9h',
+      talks: [{ id: 1, text: 'slot1', selected: false, attendees: 0}, { id: 2, text: 'slot2', selected: false, attendees: 0}] },
+      {
+        period: '9h - 10h',
+        talks: [{ id: 3, text: 'slot3', selected: false, attendees: 0}, { id: 4, selected: false, text: 'slot4', attendees: 0}]
+      }],
+    pm: [{
+      period: '13h - 15h',
+      talks: [{ id: 5, text: 'slot5', selected: false, attendees: 0}, { id: 6, text: 'slot6', selected: false, attendees: 0}] }
+      ]};
+
+    let state = reducer(undefined, {
+      type: 'START_SESSION',
+      slots: slots,
+      moment: 'am'
+    });
+
+    expect(state.session.status).toBe('ACTIVE');
+    expect(state.slots).toEqual([{
+      period: '8h - 9h',
+      talks: [{ id: 1, text: 'slot1', selected: false, attendees: 0}, { id: 2, text: 'slot2', selected: false, attendees: 0}] },
+      {
+        period: '9h - 10h',
+        talks: [{ id: 3, text: 'slot3', selected: false, attendees: 0}, { id: 4, selected: false, text: 'slot4', attendees: 0}]
+      }]);
+
+    state = reducer(undefined, {
+      type: 'START_SESSION',
+      slots: slots,
+      moment: 'pm'
+    });
+
+    expect(state.slots).toEqual([{
+      period: '13h - 15h',
+      talks: [{ id: 5, text: 'slot5', selected: false, attendees: 0}, { id: 6, text: 'slot6', selected: false, attendees: 0}] }
+    ]);
+
+  });
+
 });

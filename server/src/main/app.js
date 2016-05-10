@@ -37,7 +37,8 @@ app.start = (port) => {
           var slots = JSON.parse(JSON.stringify(slotsData));
           store.dispatch({
             type: 'START_SESSION',
-            slots: slots
+            slots: slots,
+            moment: action.moment
           });
           console.log(store.getState());
           console.log('START_SESSION by ' + socket.id);

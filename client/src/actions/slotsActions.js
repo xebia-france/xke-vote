@@ -12,9 +12,10 @@ export const selectTalk = makeActionCreator(SELECT_TALK, 'period', 'talkId');
 export const refreshSlot = makeActionCreator(REFRESH_SLOT, 'period');
 export const updateVotes = makeActionCreator(UPDATE_VOTES, 'updateVotes');
 export const updateSession = makeActionCreator(UPDATE_SESSION, 'updateSession');
-export const startSession = () => {
+export const startSession = (moment) => {
   return {
     type: START_SESSION,
+    moment: moment,
     meta: {remote: true}
   };
 };
