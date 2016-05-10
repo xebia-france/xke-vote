@@ -30,8 +30,10 @@ export const Session = React.createClass({
     if (this.props.session.status === 'ACTIVE') {
       sessionButton = <RaisedButton primary label='Terminate Session' onClick={() => terminateSession()}/>;
     } else {
-      sessionButton = <div><RaisedButton primary label='Start Morning Session' onClick={() => startSession('am')}/>
-        <RaisedButton primary label='Start Afternoon Session' onClick={() => startSession('pm')}/></div>;
+      sessionButton = <div style={{display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap'}}>
+        <RaisedButton primary label='Start Morning Session' onClick={() => startSession('am')}/>
+        <RaisedButton primary label='Start Afternoon Session' onClick={() => startSession('pm')}/>
+      </div>;
     }
     return (
       <div className='container-fluid'>
