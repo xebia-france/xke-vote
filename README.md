@@ -6,6 +6,9 @@
 * cd client 
 * npm install
 * npm start
+* [manage session](http://localhost:3000/session)
+* [vote](http://localhost:3000)
+* [results](http://localhost:3000/results)
 
 ### Server
 
