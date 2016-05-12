@@ -51,6 +51,7 @@ export const Votings = React.createClass({
                       attendees={talk.attendees}
                       fondation={talk.fondation}
                       room={talk.room}
+                      max={slot.talks.map(talk => talk.attendees).reduce((attendees1, attendees2) => Math.max(attendees1, attendees2), 0)}
                     />
                   )}
                 </div>
