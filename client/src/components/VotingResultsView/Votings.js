@@ -7,7 +7,8 @@ import Paper from 'material-ui/lib/paper';
 import {updateVotes} from '../../actions/slotsActions';
 
 const mapStateToProps = (state) => ({
-  slots: state.slots
+  slots: state.slots,
+  max: state.voters.length
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -26,11 +27,12 @@ export const Votings = React.createClass({
     slots: PropTypes.arrayOf(PropTypes.shape({
       period: PropTypes.string.isRequired,
       talks: PropTypes.array.isRequired
-    }).isRequired).isRequired
+    }).isRequired).isRequired,
+    max: PropTypes.number.isRequired
   },
 
   render: function () {
-    let { slots } = this.props;
+    let { slots, max } = this.props;
     return (
       <div className='container-fluid'>
         <div className='row'>
@@ -51,6 +53,7 @@ export const Votings = React.createClass({
                       attendees={talk.attendees}
                       fondation={talk.fondation}
                       room={talk.room}
+                      max={max}
                     />
                   )}
                 </div>
