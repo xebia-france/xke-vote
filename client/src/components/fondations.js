@@ -1,7 +1,6 @@
 import _ from 'lodash';
 
-import styles from 'material-ui/lib/styles';
-const colors = styles.Colors;
+import {colors} from 'material-ui/styles';
 
 const fondations = [
   {title: 'Front', color: colors.lightBlue400},

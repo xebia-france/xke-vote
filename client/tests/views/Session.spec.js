@@ -5,8 +5,7 @@ import spy from 'expect';
 import util from 'util';
 
 import { Session } from 'components/SessionView/Session';
-import RaisedButton from 'material-ui/lib/raised-button';
-import styles from 'material-ui/lib/styles';
+import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
 
 
 function setup(status) {

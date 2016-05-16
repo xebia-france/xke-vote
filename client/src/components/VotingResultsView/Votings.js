@@ -2,9 +2,11 @@ import React, { PropTypes } from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { connect } from 'react-redux';
 import TalkProgressBar from './TalkProgressBar';
-import AppBar from 'material-ui/lib/app-bar';
-import Paper from 'material-ui/lib/paper';
+import AppBar from 'material-ui/AppBar/AppBar';
+import Paper from 'material-ui/Paper/Paper';
 import {updateVotes} from '../../actions/slotsActions';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const mapStateToProps = (state) => ({
   slots: state.slots
@@ -29,37 +31,38 @@ export const Votings = React.createClass({
     }).isRequired).isRequired
   },
 
-  render: function () {
+  render: function() {
     let { slots } = this.props;
     return (
-      <div className='container-fluid'>
-        <div className='row'>
-          <AppBar title='Resultats des votes' showMenuIconButton={false} style={{backgroundColor: '#6B205F'}}/>
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <div className='container-fluid'>
+          <div className='row'>
+            <AppBar title='Resultats des votes' showMenuIconButton={false} style={{backgroundColor: '#6B205F'}}/>
+          </div>
+          <div className='row'>
+            {slots.map(slot =>
+              <div className='col-lg-6'>
+                <Paper style={paperStyle} zDepth={2}>
+                  <div className='row'>
+                    <h5 style={{marginLeft: '30'}}>{slot.period}</h5>
+                  </div>
+                  <div className='row'>
+                    {slot.talks.map(talk =>
+                      <TalkProgressBar
+                        key={talk.id}
+                        text={talk.text}
+                        attendees={talk.attendees}
+                        fondation={talk.fondation}
+                        room={talk.room}
+                      />
+                    )}
+                  </div>
+                </Paper>
+              </div>
+            )}
+          </div>
         </div>
-        <div className='row'>
-          {slots.map(slot =>
-            <div className='col-lg-6'>
-              <Paper style={paperStyle} zDepth={2}>
-                <div className='row'>
-                  <h5 style={{marginLeft: '30'}}>{slot.period}</h5>
-                </div>
-                <div className='row'>
-                  {slot.talks.map(talk =>
-                    <TalkProgressBar
-                      key={talk.id}
-                      text={talk.text}
-                      attendees={talk.attendees}
-                      fondation={talk.fondation}
-                      room={talk.room}
-                    />
-                  )}
-                </div>
-              </Paper>
-            </div>
-          )}
-        </div>
-      </div>
-
+      </MuiThemeProvider>
     );
   }
 });

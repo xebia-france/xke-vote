@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import { selectTalk } from '../../actions/slotsActions';
 import { submitChoosenTalks, refreshSlot } from '../../actions/slotsActions';
 import Slots from './Slots';
-import FlatButton from 'material-ui/lib/flat-button';
-import AppBar from 'material-ui/lib/app-bar';
+import FlatButton from 'material-ui/FlatButton/FlatButton';
+import AppBar from 'material-ui/AppBar/AppBar';
 import _ from 'lodash';
 import getClientId from '../../utils/clientId';
 import { push } from 'react-router-redux';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const mapStateToProps = (state) => ({
   slots: state.slots,
@@ -41,12 +43,12 @@ export const ChooseSlots = React.createClass({
     voters: PropTypes.array.isRequired,
     route: PropTypes.object.isRequired
   },
-  render: function () {
+  render: function() {
     let { submitChoosenTalks, goToResults, ...slots } = this.props;
     let alreadyVote = _(this.props.voters).find(voter => voter === getClientId()) !== undefined;
     let checkAlreadyVote = this.props.route.checkVote !== undefined ? this.props.route.checkVote : true;
     let choiceComponent;
-    if (!checkAlreadyVote || !alreadyVote) {
+    if(!checkAlreadyVote || !alreadyVote) {
       choiceComponent = <FlatButton label='Submit Choices'
                                     onTouchTap={() => {
                                       console.log('onTouch');
@@ -57,27 +59,29 @@ export const ChooseSlots = React.createClass({
       goToResults();
     }
     return (
-      <div className='container-fluid'>
-        <div className='row'>
-          <AppBar title='XKE Agenda'
-                  showMenuIconButton={false}
-                  iconElementRight={choiceComponent}
-                  style={{position: 'fixed', backgroundColor: '#6B205F'}}
-          />
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <div className='container-fluid'>
+          <div className='row'>
+            <AppBar title='XKE Agenda'
+                    showMenuIconButton={false}
+                    iconElementRight={choiceComponent}
+                    style={{position: 'fixed', backgroundColor: '#6B205F'}}
+            />
+          </div>
+          <div className='row' style={{paddingTop: 60}}>
+            <Slots {...slots} style/>
+          </div>
         </div>
-        <div className='row' style={{paddingTop: 60}}>
-          <Slots {...slots} style/>
-        </div>
-      </div>
+      </MuiThemeProvider>
     );
   }
 });
 
 const choosenSlots = (slots) => {
-  if (slots) {
+  if(slots) {
     return _(slots).map(s => {
       let selectedTalk = s.talks.filter(t => t.selected)[0];
-      if (selectedTalk) {
+      if(selectedTalk) {
         return {
           period: s.period,
           talk: selectedTalk.id
