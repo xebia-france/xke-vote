@@ -2,6 +2,9 @@ import express from 'express';
 import socketIo from 'socket.io';
 import makeStore from './core/store';
 import {slotsData} from './conf/slots.js';
+import {saveSlots, readSlots} from './core/admin.js';
+import bodyParser from 'body-parser';
+
 
 const app = module.exports = express();
 let io;
@@ -34,7 +37,8 @@ app.start = (port) => {
           var slots = JSON.parse(JSON.stringify(slotsData));
           store.dispatch({
             type: 'START_SESSION',
-            slots: slots
+            slots: slots,
+            moment: action.moment
           });
           console.log(store.getState());
           console.log('START_SESSION by ' + socket.id);
@@ -54,5 +58,17 @@ app.start = (port) => {
   });
   return server;
 };
+
+app.use(bodyParser.json());
+
+app.post('/save-slots', function (req, res) {
+  console.log(req.body);
+  saveSlots(req.body.slots);
+  res.send('Slots has been saved');
+});
+
+app.get('/save-slots', function (req, res) {
+  res.send(readSlots());
+});
 
 export default app;

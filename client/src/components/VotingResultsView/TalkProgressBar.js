@@ -1,11 +1,9 @@
 import React from 'react';
-import LinearProgress from 'material-ui/lib/linear-progress';
+import LinearProgress from 'material-ui/LinearProgress/LinearProgress';
 import {getFondationStyle} from '../fondations.js';
-import Avatar from 'material-ui/lib/avatar';
+import Avatar from 'material-ui/Avatar/Avatar';
 
-import styles from 'material-ui/lib/styles';
-
-const colors = styles.Colors;
+import {colors} from 'material-ui/styles';
 
 const style = {
   margin: 10
@@ -35,7 +33,7 @@ export const TalkProgressBar = ({ text, attendees, fondation, room }) => (
                             max={70}
                             style={{height: '5px'}}
                             color={getFondationStyle(fondation).color}
-                            />
+            />
           </div>
         </div>
       </div>

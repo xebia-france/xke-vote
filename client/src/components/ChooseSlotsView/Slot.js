@@ -1,13 +1,12 @@
 import React, { PropTypes } from 'react';
-import List from 'material-ui/lib/lists/list';
-import ListItem from 'material-ui/lib/lists/list-item';
-import Avatar from 'material-ui/lib/avatar';
-import styles from 'material-ui/lib/styles';
-import Paper from 'material-ui/lib/paper';
+import List from 'material-ui/List/List';
+import ListItem from 'material-ui/List/ListItem';
+import Subheader from 'material-ui/Subheader';
+import Avatar from 'material-ui/Avatar';
+import {colors} from 'material-ui/styles';
+import Paper from 'material-ui/Paper';
 import {getFondationStyle} from '../fondations.js';
 import HeaderSlot from './HeaderSlot';
-
-const colors = styles.Colors;
 
 const paperStyle = {
   margin: 20
@@ -37,8 +36,10 @@ const talkStyle = (talk) => {
 export const Slot = ({ period, talks, onClick, refreshSlot }) => (
   <div>
     <Paper style={paperStyle} zDepth={2}>
-      <List key={period} subheader={<HeaderSlot period={period} refreshSlot={refreshSlot} />}
-            subheaderStyle={subHeaderListStyle}>
+      <List key={period}>
+        <Subheader>
+          <HeaderSlot period={period} refreshSlot={refreshSlot} style={subHeaderListStyle}/>
+        </Subheader>
         {talks.map(talk =>
           <div key={talk.id}>
             <ListItem key={talk.id}

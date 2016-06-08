@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import IconButton from 'material-ui/lib/icon-button';
+import IconButton from 'material-ui/IconButton/IconButton';
 
 export const HeaderSlot = ({ period, refreshSlot }) => (
   <div className='row'>

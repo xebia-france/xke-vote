@@ -8,8 +8,7 @@ const defaultState = {session: {status: "UNKNOWN"}, slots: [], voters: []};
 export const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case 'START_SESSION':
-      var finalState = {session: {id: uuid.v4(), status: "ACTIVE"}, slots: setSlots([], action.slots), voters: []};
-      return finalState;
+      return {session: {id: uuid.v4(), status: "ACTIVE"}, slots: setSlots([], action.slots[action.moment]), voters: []};
       break;
     case 'TERMINATE_SESSION':
       return {...state, slots: chooseRooms(state.slots), session: {id: state.session.id, status: "TERMINATE"}};

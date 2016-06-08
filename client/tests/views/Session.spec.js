@@ -2,10 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import spy from 'expect';
+import util from 'util';
 
 import { Session } from 'components/SessionView/Session';
-import RaisedButton from 'material-ui/lib/raised-button';
-import styles from 'material-ui/lib/styles';
+import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
 
 
 function setup(status) {
@@ -24,18 +24,19 @@ function setup(status) {
 }
 
 describe('Session components', () => {
-  it('Should include a <RaisedButton> to start a session', function () {
+  it('Should include two <RaisedButton> to start a session', function () {
     const { output, props } = setup("UNKNOWN");
-    let sessionButton = output.find(RaisedButton);
+    let sessionButtons = output.find(RaisedButton);
 
-    expect(sessionButton.prop('label')).to.equal('Start Session');
-    expect(props.startSession.calls.length).to.equal(0);
-    expect(props.terminateSession.calls.length).to.equal(0);
+    expect(sessionButtons.length).to.equal(2);
 
-    sessionButton.simulate('click');
-
+    expect(sessionButtons.at(0).prop('label')).to.equal('Start Morning Session');
+    sessionButtons.at(0).simulate('click');
     expect(props.startSession.calls.length).to.equal(1);
-    expect(props.terminateSession.calls.length).to.equal(0);
+
+    expect(sessionButtons.at(1).prop('label')).to.equal('Start Afternoon Session');
+    sessionButtons.at(1).simulate('click');
+    expect(props.startSession.calls.length).to.equal(2);
 
   });
 

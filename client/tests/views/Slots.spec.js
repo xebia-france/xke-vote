@@ -4,12 +4,10 @@ import { expect } from 'chai';
 import spy from 'expect';
 
 import { Slot } from 'components/ChooseSlotsView/Slot';
-import ListItem from 'material-ui/lib/lists/list-item';
-import Avatar from 'material-ui/lib/avatar';
-import List from 'material-ui/lib/lists/list';
-import styles from 'material-ui/lib/styles';
-
-const colors = styles.Colors;
+import ListItem from 'material-ui/List/ListItem';
+import Avatar from 'material-ui/Avatar/Avatar';
+import List from 'material-ui/List/List';
+import {colors} from 'material-ui/styles';
 
 function setup() {
   let props = {
@@ -38,7 +36,7 @@ function setup() {
 }
 
 describe('Slots components', () => {
-  it('Should include an <ul> containing slots and talks', function () {
+  it('Should include an <ul> containing slots and talks', function() {
     const { output } = setup();
 
     let talk = output.find(ListItem);
@@ -53,9 +51,9 @@ describe('Slots components', () => {
     expect(avatar.props.children).to.equal('Back');
   });
 
-  describe('Submitting choosen talks', function () {
+  describe('Submitting choosen talks', function() {
 
-    it('should send choosen talks', function () {
+    it('should send choosen talks', function() {
       const { output, props } = setup();
 
       let submitTalk = output.find(ListItem).first();
