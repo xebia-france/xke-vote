@@ -10,7 +10,7 @@ export default class Root extends React.Component {
     socket: PropTypes.object.isRequired
   };
 
-  get content() {
+  get content () {
     return (
       <Router history={this.props.history}>
         {this.props.routes}
@@ -19,22 +19,22 @@ export default class Root extends React.Component {
     );
   }
 
-  get devTools() {
-    if(__DEBUG__) {
-      if(__DEBUG_NEW_WINDOW__) {
-        if(!window.devToolsExtension) {
+  get devTools () {
+    if (__DEBUG__) {
+      if (__DEBUG_NEW_WINDOW__) {
+        if (!window.devToolsExtension) {
           require('../../utils/createDevToolsWindow').default(this.props.store);
         } else {
           window.devToolsExtension.open();
         }
-      } else if(!window.devToolsExtension) {
+      } else if (!window.devToolsExtension) {
         const DevTools = require('components/containers/DevTools').default;
         return <DevTools />;
       }
     }
   }
 
-  render() {
+  render () {
     return (
       <Provider store={this.props.store}>
         <div style={{ height: '100%' }}>

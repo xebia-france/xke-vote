@@ -31,7 +31,7 @@ export const Votings = React.createClass({
     }).isRequired).isRequired
   },
 
-  render: function() {
+  render: function () {
     let { slots } = this.props;
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>

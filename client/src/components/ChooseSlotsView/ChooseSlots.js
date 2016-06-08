@@ -43,12 +43,12 @@ export const ChooseSlots = React.createClass({
     voters: PropTypes.array.isRequired,
     route: PropTypes.object.isRequired
   },
-  render: function() {
+  render: function () {
     let { submitChoosenTalks, goToResults, ...slots } = this.props;
     let alreadyVote = _(this.props.voters).find(voter => voter === getClientId()) !== undefined;
     let checkAlreadyVote = this.props.route.checkVote !== undefined ? this.props.route.checkVote : true;
     let choiceComponent;
-    if(!checkAlreadyVote || !alreadyVote) {
+    if (!checkAlreadyVote || !alreadyVote) {
       choiceComponent = <FlatButton label='Submit Choices'
                                     onTouchTap={() => {
                                       console.log('onTouch');
@@ -78,10 +78,10 @@ export const ChooseSlots = React.createClass({
 });
 
 const choosenSlots = (slots) => {
-  if(slots) {
+  if (slots) {
     return _(slots).map(s => {
       let selectedTalk = s.talks.filter(t => t.selected)[0];
-      if(selectedTalk) {
+      if (selectedTalk) {
         return {
           period: s.period,
           talk: selectedTalk.id

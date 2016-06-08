@@ -24,11 +24,11 @@ export const Session = React.createClass({
   render: function () {
     let { startSession, terminateSession } = this.props;
     let sessionButton;
-    if( this.props.session.status === 'ACTIVE') {
+    if (this.props.session.status === 'ACTIVE') {
       sessionButton = <RaisedButton primary label='Terminate Session' onClick={() => terminateSession()}/>;
     } else {
-      sessionButton = <div style={{display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap'}}>
-        <RaisedButton primary label='Start Morning Session' onClick={() => startSession('am')}/>
+      sessionButton = <div>
+        <RaisedButton primary label='Start Morning Session' style= {{marginRight: '10px'}} onClick={() => startSession('am')}/>
         <RaisedButton primary label='Start Afternoon Session' onClick={() => startSession('pm')}/>
       </div>;
     }
@@ -39,7 +39,7 @@ export const Session = React.createClass({
             <AppBar title='XKE Agenda' showMenuIconButton={false} style={{backgroundColor: '#6B205F'}}/>
           </div>
           <div className='row'>
-            <div className='col-lg-3'>
+            <div className='col-lg-6'>
               {sessionButton}
             </div>
           </div>
