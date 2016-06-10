@@ -1,7 +1,6 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { startSession } from '../../actions/slotsActions';
-import { terminateSession } from '../../actions/slotsActions';
+import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
+import {startSession, terminateSession} from '../../actions/slotsActions';
 import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
 import AppBar from 'material-ui/AppBar/AppBar';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -21,14 +20,23 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export const Session = React.createClass({
+
+  propTypes: {
+    startSession: PropTypes.func.isRequired,
+    terminateSession: PropTypes.func.isRequired,
+    session: PropTypes.shape({
+      status: PropTypes.string
+    }).isRequired
+  },
+
   render: function () {
-    let { startSession, terminateSession } = this.props;
+    let {startSession, terminateSession} = this.props;
     let sessionButton;
     if (this.props.session.status === 'ACTIVE') {
       sessionButton = <RaisedButton primary label='Terminate Session' onClick={() => terminateSession()}/>;
     } else {
       sessionButton = <div>
-        <RaisedButton primary label='Start Morning Session' style= {{marginRight: '10px'}} onClick={() => startSession('am')}/>
+        <RaisedButton primary label='Start Morning Session' style={{marginRight: '10px'}} onClick={() => startSession('am')}/>
         <RaisedButton primary label='Start Afternoon Session' onClick={() => startSession('pm')}/>
       </div>;
     }
@@ -40,7 +48,7 @@ export const Session = React.createClass({
           </div>
           <div className='row'>
             <div className='col-lg-6'>
-              {sessionButton}
+                 {sessionButton}
             </div>
           </div>
         </div>
