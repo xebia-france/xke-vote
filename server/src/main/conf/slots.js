@@ -1,95 +1,85 @@
-export const slotsData = {am: [
-  {
-    period: '10h45-11h40',
-    talks: [
-      {
-        id: 1,
-        text: '[Demo] Kodo Kojo',
-        fondation: 'Divers',
-        attendees: 0
-      },
-      {
-        id: 2,
-        text: '[REX] Lora/LoraWan',
-        fondation: 'Divers',
-        attendees: 0
-      },
-      {
-        id: 3,
-        text: 'Testing React & Redux',
-        fondation: 'Front',
-        attendees: 0
-      },
-      {
-        id: 4,
-        text: '[BackToBasics] Les 5 questions con(tre) l\'agilité et comment y répondre',
-        fondation: 'Agile',
-        attendees: 0
-      },
-      {
-        id: 5,
-        text: '[Demo] Tout est une question de style',
-        fondation: 'Craft',
-        attendees: 0
-      }
-    ]
-  }],
-pm: [
-  {
-    period: '14h35-16H30',
-    talks: [
-      {
-        id: 1,
-        text: '[Formal][Hands-On] Métrologie: quoi, pourquoi, comment?',
-        fondation: 'DevOps',
-        attendees: 0
-      },
-      {
-        id: 2,
-        text: '[Hands-On] Sigfox',
-        fondation: 'IoT',
-        attendees: 0
-      },
-      {
-        id: 3,
-        text: '[Hands-On] Demistifying FP: Functionnal Error Handling',
-        fondation: 'Craft',
-        attendees: 0
-      },
-      {
-        id: 4,
-        text: '[Hands-On] Cassandra, LA base',
-        fondation: 'Back',
-        attendees: 0
-      }]
-  },
-  {
-    period: '16H40-18H30',
-    talks: [
-      {
-        id: 5,
-        text: 'Beer Game',
-        fondation: 'Agile',
-        attendees: 0
-      },
-      {
-        id: 6,
-        text: '[Hands-On][Demo] Live Dojo',
-        fondation: 'Craft',
-        attendees: 0
-      },
-      {
-        id: 7,
-        text: '[Hands-On] Kafka',
-        fondation: 'Data',
-        attendees: 0
-      },
-      {
-        id: 8,
-        text: '[Formal] Le DevOps pour les nuls\n& [Hands-On] Vagrant',
-        fondation: 'Divers',
-        attendees: 0
-      }
-    ]
-  }]};
+export const slotsData = {
+  am: [
+    {
+      period: '10h00-10h40',
+      talks: [
+        {
+          id: 1,
+          text: '[Demo] Kintribe Demo + Architecture + code',
+          fondation: 'Divers',
+          attendees: 0
+        },
+        {
+          id: 2,
+          text: '[Formal] Les nouveautés vues à Google IO',
+          fondation: 'Divers',
+          attendees: 0
+        },
+        {
+          id: 3,
+          text: '[Formal] When Software Craftsmanship meets Data Science',
+          fondation: 'Front',
+          attendees: 0
+        }
+      ]
+    }],
+  pm: [
+    {
+      period: '14h20-16H20',
+      talks: [
+        {
+          id: 1,
+          text: '[Formal][Hands-On] Web Scrapping ',
+          fondation: 'Back',
+          attendees: 0
+        },
+        {
+          id: 2,
+          text: '[Hands-On] Docker Swarm lvl UP',
+          fondation: 'DevOps',
+          attendees: 0
+        }]
+    },
+    {
+      period: '14h20-18h30',
+      talks: [
+        {
+          id: 3,
+          text: '[Formal] Choisissez votre style avec Docker & Amazon WebServices \n\n+ [Hands-On] Tensorflowand Deep Learning, without a PhD',
+          fondation: 'Divers',
+          attendees: 0
+        },
+        {
+          id: 4,
+          text: '[Formal] REX Lora /LoraWaN \n\n& [Hands-on] Sigfox : un cran plus loin, avec une application dans le cloud.',
+          fondation: 'Divers',
+          attendees: 0
+        }
+      ]
+    },
+    {
+      period: '16h20-18h30',
+      talks: [
+        {
+          id: 5,
+          text: '[Hands-on] Cassandra et Java, mise en pratique',
+          fondation: 'Back',
+          attendees: 0
+        },
+        {
+          id: 6,
+          text: '[Agile] Solution Focused Retrospective',
+          fondation: 'Agile',
+          attendees: 0
+        },
+        {
+          id: 7,
+          text: '[Hands-on] Cassandra et Java, mise en pratique \n\n& [Formal] Introduction à Golang',
+          fondation: 'Back',
+          attendees: 0
+        }
+      ]
+    }
+  ]
+};
 
