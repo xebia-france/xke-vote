@@ -3,7 +3,7 @@ export const voters = (state = [], action) => {
     case 'UPDATE_SESSION':
       return [...action.updateSession.voters];
     case 'UPDATE_VOTES':
-      return [...state, ...action.updateVotes.voters];
+      return [...action.updateVotes.voters];
     default:
       return state;
   }
