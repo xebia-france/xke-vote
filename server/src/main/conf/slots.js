@@ -38,20 +38,22 @@ export const slotsData = {
           text: '[Hands-On] Docker Swarm lvl UP',
           fondation: 'DevOps',
           attendees: 0
-        }]
+        },
+        
+        {
+          id: 3,
+          text: '[Formal] REX Lora /LoraWaN \n\n& SAFE : City Game.',
+          fondation: 'Divers',
+          attendees: 0
+        }
+      ]
     },
     {
       period: '14h20-18h30',
       talks: [
         {
-          id: 3,
-          text: '[Formal] Choisissez votre style avec Docker & Amazon WebServices \n\n+ [Hands-On] Tensorflowand Deep Learning, without a PhD',
-          fondation: 'Divers',
-          attendees: 0
-        },
-        {
           id: 4,
-          text: '[Formal] REX Lora /LoraWaN \n\n& [Hands-on] Sigfox : un cran plus loin, avec une application dans le cloud.',
+          text: '[Formal] Choisissez votre style avec Docker & Amazon WebServices \n\n+ [Hands-On] Tensorflowand Deep Learning, without a PhD',
           fondation: 'Divers',
           attendees: 0
         }
@@ -68,12 +70,6 @@ export const slotsData = {
         },
         {
           id: 6,
-          text: '[Agile] Solution Focused Retrospective',
-          fondation: 'Agile',
-          attendees: 0
-        },
-        {
-          id: 7,
           text: '[Hands-on] Cassandra et Java, mise en pratique \n\n& [Formal] Introduction à Golang',
           fondation: 'Back',
           attendees: 0
