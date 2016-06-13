@@ -31,10 +31,9 @@ describe('Voters Reducers', () => {
       updateVotes: updateVotesData
     });
 
-    expect(newState.length).toBe(3);
-    expect(newState[0]).toBe('1234-5678');
-    expect(newState[1]).toBe('4321-5678');
-    expect(newState[2]).toBe('1234-8765');
+    expect(newState.length).toBe(2);
+    expect(newState[0]).toBe('4321-5678');
+    expect(newState[1]).toBe('1234-8765');
 
   });
 });

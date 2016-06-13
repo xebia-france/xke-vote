@@ -9,7 +9,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const mapStateToProps = (state) => ({
-  slots: state.slots
+  slots: state.slots,
+  max: state.voters.length
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -28,11 +29,12 @@ export const Votings = React.createClass({
     slots: PropTypes.arrayOf(PropTypes.shape({
       period: PropTypes.string.isRequired,
       talks: PropTypes.array.isRequired
-    }).isRequired).isRequired
+    }).isRequired).isRequired,
+    max: PropTypes.number.isRequired
   },
 
   render: function () {
-    let { slots } = this.props;
+    let { slots, max } = this.props;
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div className='container-fluid'>
@@ -54,6 +56,7 @@ export const Votings = React.createClass({
                         attendees={talk.attendees}
                         fondation={talk.fondation}
                         room={talk.room}
+                        max={max}
                       />
                     )}
                   </div>
