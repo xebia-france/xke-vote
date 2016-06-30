@@ -1,77 +1,90 @@
 export const slotsData = {
   am: [
     {
-      period: '10h00-10h40',
+      period: '10h15-11h10',
       talks: [
         {
           id: 1,
-          text: '[Demo] Kintribe Demo + Architecture + code',
+          text: '[Formal] - Le Dark DAO: que c\'est il passé ? #blockchain',
           fondation: 'Divers',
           attendees: 0
         },
         {
           id: 2,
-          text: '[Formal] Les nouveautés vues à Google IO',
-          fondation: 'Divers',
+          text: '[Formal] - Ops Tooling - Debug from the other side',
+          fondation: 'DevOps',
           attendees: 0
         },
         {
           id: 3,
-          text: '[Formal] When Software Craftsmanship meets Data Science',
-          fondation: 'Front',
+          text: '[WeScale] Sentry logging',
+          fondation: 'Cloud',
           attendees: 0
         }
       ]
     }],
   pm: [
     {
-      period: '14h20-16H20',
+      period: '14h10-16H05',
       talks: [
         {
           id: 1,
-          text: '[Formal][Hands-On] Web Scrapping ',
+          text: '[Hands on] - Concurrente programming with Go.',
           fondation: 'Back',
           attendees: 0
         },
         {
           id: 2,
-          text: '[Hands-On] Docker Swarm lvl UP',
-          fondation: 'DevOps',
+          text: '[Hands-On] - Akka Stream (Scala)',
+          fondation: 'Back',
           attendees: 0
         },
         
         {
           id: 3,
-          text: '[Formal] REX Lora /LoraWaN \n\n& SAFE : City Game.',
-          fondation: 'Divers',
+          text: '[HandsOn] Demistifying Scala: The Future is Now. Full Async Programming.',
+          fondation: 'Craft',
           attendees: 0
-        }
-      ]
-    },
-    {
-      period: '14h20-18h30',
-      talks: [
+        },
         {
           id: 4,
-          text: '[Formal] Choisissez votre style avec Docker & Amazon WebServices \n\n+ [Hands-On] Tensorflowand Deep Learning, without a PhD',
+          text: '[Hands On] Implementer les 4 niveaux de SAFe avec Jira et quelques Add On && [Formal] The Physical Web: A sneak peak into the future of IoT and mobility',
+          fondation: 'Divers',
+          attendees: 0
+        },
+        {
+          id: 5,
+          text: '[WeScale] Designate: Openstack DNS as a Service && [Formal] The Physical Web: A sneak peak into the future of IoT and mobility',
           fondation: 'Divers',
           attendees: 0
         }
       ]
     },
     {
-      period: '16h20-18h30',
+      period: '16h10-18h05',
       talks: [
         {
-          id: 5,
-          text: '[Hands-on] Cassandra et Java, mise en pratique',
+          id: 1,
+          text: '[Hands-On] - Implementing front propagation in Scala',
           fondation: 'Back',
           attendees: 0
         },
         {
-          id: 6,
-          text: '[Hands-on] Cassandra et Java, mise en pratique \n\n& [Formal] Introduction à Golang',
-          fondation: 'Back',
+          id: 2,
+          text: '[Hands-On] - Sigfox, un cran plus loin, avec une application dans le cloud.',
+          fondation: 'IoT',
+          attendees: 0
+        },
+        {
+          id: 3,
+          text: '[REX] Un lac, des chevaux et des hommes',
+          fondation: 'Divers',
+          attendees: 0
+        },
+        {
+          id: 4,
+          text: '[WeScale] StackStorm',
+          fondation: 'Cloud',
           attendees: 0
         }
       ]
