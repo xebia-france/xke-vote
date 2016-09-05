@@ -57,8 +57,8 @@ export const slotsData = {
         },
         {
           id: 2,
-          text: '[Formal] COAP le nouveau protocole IOT  &&  [Formal] GraphQL/Relay vs FalcorJS, un nouveau regard sur les architectures REST ?',
-          fondation: 'Divers',
+          text: '[Hands-on] Introduction à React Native',
+          fondation: 'Mobile',
           attendees: 0
         },
 
@@ -87,13 +87,13 @@ export const slotsData = {
         },
         {
           id: 6,
-          text: '[Hands On] Introduction à React Native',
-          fondation: 'Mobile',
+          text: '[Formal] COAP le nouveau protocole IOT[Hands On] &&  [Formal] GraphQL/Relay vs FalcorJS, un nouveau regard sur les architectures REST ?',
+          fondation: 'Divers',
           attendees: 0
         },
         {
           id: 7,
-          text: '[Formal] Architecture CDN (REX Canal+) && [Formal] Scrapy, initiation au scrapping web en pytho',
+          text: '[Formal] Architecture CDN (REX Canal+) && [Formal] Scrapy, initiation au scrapping web en python',
           fondation: 'Divers',
           attendees: 0
         }
