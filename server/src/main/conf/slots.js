@@ -4,20 +4,8 @@ export const slotsData = {
     talks: [
       {
         id: 1,
-        text: '[Demo] GraphX et GraphFrame',
+        text: 'Test CI',
         fondation: 'Data',
-        attendees: 0
-      },
-      {
-        id: 2,
-        text: '[Formal] Le déploiement continu rêvé chez Aldebaran',
-        fondation: 'Divers',
-        attendees: 0
-      },
-      {
-        id: 3,
-        text: '[REX] Angular 2: 10j pour coder une webapp de gestion toutes options  &&  [Formal] Objenious + Lora: découverte',
-        fondation: 'Divers',
         attendees: 0
       }
     ]
@@ -27,18 +15,7 @@ export const slotsData = {
       talks: [
         {
           id: 4,
-          text: '[Formal] Comment reconnaître le bon du mauvais manager ?',
-          fondation: 'Divers',
-          attendees: 0
-        },
-        {
-          id: 5,
-          text: '[Formal] NSD+Unbound, ou comment et pourquoi remplacer Bind',
-          fondation: 'Divers',
-          attendees: 0
-        }, {
-          id: 6,
-          text: '[Formal] Sumo : Le continuous delivery qui envoie du lourd',
+          text: 'Test CI',
           fondation: 'Divers',
           attendees: 0
         }
