@@ -41,20 +41,20 @@ export const slotsData = {
         },
         {
           id: 3,
-          text: 'Rock-IT + Comment nager avec agilité dans un Datalake',
+          text: 'Comment nager avec agilité dans un Datalake',
           fondation: 'Divers',
           attendees: 0
         },
         {
           id: 4,
-          text: 'Pimp my PHP + Métriques de qualité sous Android + Menlook',
+          text: 'Pimp my PHP + Rock-IT',
           fondation: 'Divers',
           attendees: 0
         }
       ]
     },
     {
-      period: '16h30-18h230',
+      period: '16h30-18h30',
       talks: [
         {
           id: 5,
@@ -64,19 +64,19 @@ export const slotsData = {
         },
         {
           id: 6,
-          text: 'Comment (vraiment) tester une application Android',
+          text: 'Comment (vraiment) tester une application Android + La fin de la hiérarchie n\'est pas celle du manager',
           fondation: 'Back',
           attendees: 0
         },
         {
           id: 7,
-          text: 'Rex PMU Data + La fin de la hiérarchie n\'est pas celle du manager',
+          text: 'Rex PMU Data + Construire des métriques de qualité pour Android + Rex Menlook',
           fondation: 'Divers',
           attendees: 0
         },
         {
           id: 8,
-          text: 'POC Michelin + Slideware 101',
+          text: 'Rex POC Michelin + Slideware 101',
           fondation: 'Divers',
           attendees: 0
         }
