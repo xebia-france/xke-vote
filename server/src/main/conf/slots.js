@@ -1,53 +1,30 @@
 export const slotsData = {
-  am: [{
-    period: '9h45-11h40',
-    talks: [
-      {
-        id: 1,
-        text: 'Search on Hadoop',
-        fondation: 'Data',
-        attendees: 0
-      },
-      {
-        id: 2,
-        text: 'Conteneurs 101',
-        fondation: 'DevOps',
-        attendees: 0
-      },
-      {
-        id: 3,
-        text: 'Réalisation d\'un jeu sous Unity',
-        fondation: 'Divers',
-        attendees: 0
-      }
-    ]
-  }
-  ],
+  am: [],
   pm: [
     {
-      period: '14h30-16h25',
+      period: '14h30-16h30',
       talks: [
         {
           id: 1,
-          text: 'IBM Bluemix',
-          fondation: 'Cloud',
+          text: 'Unity',
+          fondation: 'Divers',
           attendees: 0
         },
         {
           id: 2,
-          text: 'Logmatic + Technologie for a better world',
+          text: 'Git + Undefined is not a slot',
           fondation: 'Divers',
           attendees: 0
         },
         {
           id: 3,
-          text: 'Comment nager avec agilité dans un Datalake',
+          text: 'Agilité à l\'échelle + Découper ses users stories',
           fondation: 'Divers',
           attendees: 0
         },
         {
           id: 4,
-          text: 'Pimp my PHP + Rock-IT',
+          text: 'Rex Menlook : AWC-ECS',
           fondation: 'Divers',
           attendees: 0
         }
@@ -58,25 +35,19 @@ export const slotsData = {
       talks: [
         {
           id: 5,
-          text: 'Akka Stream',
-          fondation: 'Back',
+          text: 'AWS mobile',
+          fondation: 'Mobile',
           attendees: 0
         },
         {
           id: 6,
-          text: 'Comment (vraiment) tester une application Android + La fin de la hiérarchie n\'est pas celle du manager',
-          fondation: 'Back',
-          attendees: 0
-        },
-        {
-          id: 7,
-          text: 'Rex PMU Data + Construire des métriques de qualité pour Android + Rex Menlook',
+          text: 'Algos du quotidien + Kintribe',
           fondation: 'Divers',
           attendees: 0
         },
         {
-          id: 8,
-          text: 'Rex POC Michelin + Slideware 101',
+          id: 7,
+          text: 'Comment j\'ai domotisé mon appartement',
           fondation: 'Divers',
           attendees: 0
         }
