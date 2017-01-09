@@ -12,7 +12,7 @@ export const slotsData = {
         },
         {
           id: 2,
-          text: 'Rex Menlook : AWC-ECS + Undefined is not a slot',
+          text: 'Git + Undefined is not a slot',
           fondation: 'Divers',
           attendees: 0
         },
@@ -20,6 +20,12 @@ export const slotsData = {
           id: 3,
           text: 'Agilité à l\'échelle + Découper ses users stories',
           fondation: 'Agile',
+          attendees: 0
+        },
+        {
+          id: 4,
+          text: 'Rex Menlook : AWC-ECS',
+          fondation: 'WeScale',
           attendees: 0
         }
       ]
