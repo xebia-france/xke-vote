@@ -1,10 +1,10 @@
 export const rooms = [
   {
-    name: 'Haussman',
+    name: 'Eiffel',
     priority: 4
   },
   {
-    name: 'Kintribe',
+    name: 'Haussman',
     priority: 3
   },
   {

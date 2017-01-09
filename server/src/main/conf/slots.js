@@ -19,13 +19,13 @@ export const slotsData = {
         {
           id: 3,
           text: 'Agilité à l\'échelle + Découper ses users stories',
-          fondation: 'Divers',
+          fondation: 'Agile',
           attendees: 0
         },
         {
           id: 4,
           text: 'Rex Menlook : AWC-ECS',
-          fondation: 'Divers',
+          fondation: 'WeScale',
           attendees: 0
         }
       ]
