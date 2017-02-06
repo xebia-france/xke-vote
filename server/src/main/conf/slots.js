@@ -12,20 +12,20 @@ export const slotsData = {
         },
         {
           id: 2,
-          text: 'Git + Undefined is not a slot',
-          fondation: 'Divers',
-          attendees: 0
-        },
-        {
-          id: 3,
-          text: 'Agilité à l\'échelle + Découper ses users stories',
+          text: 'Les Equipes Haute Performance + Comment déployer SAFe dans une entreprise ?',
           fondation: 'Agile',
           attendees: 0
         },
         {
+          id: 3,
+          text: 'npm expliqué à mon chat',
+          fondation: 'Back',
+          attendees: 0
+        },
+        {
           id: 4,
-          text: 'Rex Menlook : AWC-ECS',
-          fondation: 'WeScale',
+          text: 'Monitoring avec Graphite & collectd',
+          fondation: 'Devops',
           attendees: 0
         }
       ]
@@ -35,19 +35,25 @@ export const slotsData = {
       talks: [
         {
           id: 5,
-          text: 'AWS mobile',
-          fondation: 'Mobile',
-          attendees: 0
-        },
-        {
-          id: 6,
-          text: 'Algos du quotidien + Kintribe',
+          text: 'VIM: tu n\'as pas besoin d\'un IDE',
           fondation: 'Divers',
           attendees: 0
         },
         {
+          id: 6,
+          text: 'Serious games et ice breaker, faites vos courses',
+          fondation: 'Agile',
+          attendees: 0
+        },
+        {
           id: 7,
-          text: 'Comment j\'ai domotisé mon appartement',
+          text: 'Les services de messaging chez AWS + CloudFormation',
+          fondation: 'Agile',
+          attendees: 0
+        },
+        {
+          id: 8,
+          text: 'Comment coder son premier bot',
           fondation: 'Divers',
           attendees: 0
         }
