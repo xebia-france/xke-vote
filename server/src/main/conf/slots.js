@@ -1,31 +1,65 @@
 export const slotsData = {
-  am: [],
+  am: [{
+      period: '10h00-12h00',
+      talks: [
+          {
+              id: 1,
+              text: 'In-Memory Computing avec Apache Ignite',
+              fondation: 'Back',
+              attendees: 0
+          },
+          {
+              id: 2,
+              text: 'VueJS',
+              fondation: 'Front',
+              attendees: 0
+          },
+          {
+              id: 3,
+              text: 'Transfo Agile chez EDF + Devops 101',
+              fondation: 'Divers',
+              attendees: 0
+          },
+          {
+              id: 4,
+              text: 'Automatiser mon infrastructure + AWS - Introduction aux VPC & IAM',
+              fondation: 'Divers',
+              attendees: 0
+          }
+      ]
+  }],
   pm: [
     {
       period: '14h30-16h30',
       talks: [
         {
           id: 1,
-          text: 'Unity',
-          fondation: 'Divers',
+          text: 'Android Things & SwiftyGPIO',
+          fondation: 'Mobile',
           attendees: 0
         },
         {
           id: 2,
-          text: 'Les Equipes Haute Performance + Comment déployer SAFe dans une entreprise ?',
-          fondation: 'Agile',
-          attendees: 0
-        },
-        {
-          id: 3,
-          text: 'npm expliqué à mon chat',
+          text: 'Akka stream for Image processing + Akka et microservices',
           fondation: 'Back',
           attendees: 0
         },
         {
+          id: 3,
+          text: "Machine Learning + DynamoDB",
+          fondation: 'Divers',
+          attendees: 0
+        },
+        {
           id: 4,
-          text: 'Monitoring avec Graphite & collectd',
-          fondation: 'Devops',
+          text: 'Rally Test Game + Oubliez les Frameworks, pensez Patterns',
+          fondation: 'Agile',
+          attendees: 0
+        },
+        {
+          id: 5,
+          text: 'LaPoste OpenAPI (API Management) + Type Wars',
+          fondation: 'Divers',
           attendees: 0
         }
       ]
@@ -34,26 +68,32 @@ export const slotsData = {
       period: '16h30-18h30',
       talks: [
         {
-          id: 5,
-          text: 'VIM: tu n\'as pas besoin d\'un IDE',
+          id: 6,
+          text: 'Git',
           fondation: 'Divers',
           attendees: 0
         },
         {
-          id: 6,
-          text: 'Serious games et ice breaker, faites vos courses',
-          fondation: 'Agile',
-          attendees: 0
-        },
-        {
           id: 7,
-          text: 'Les services de messaging chez AWS + CloudFormation',
-          fondation: 'Agile',
+          text: 'AWS Lambda',
+          fondation: 'Cloud',
           attendees: 0
         },
         {
           id: 8,
-          text: 'Comment coder son premier bot',
+          text: 'Open Space Agile + Gamify your todo list',
+          fondation: 'Agile',
+          attendees: 0
+        },
+        {
+          id: 9,
+          text: 'Algorithmes du quotidien',
+          fondation: 'Divers',
+          attendees: 0
+        },
+        {
+          id: 10,
+          text: 'Simple typeclass derivation + BigData for dummies',
           fondation: 'Divers',
           attendees: 0
         }

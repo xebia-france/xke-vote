@@ -1,5 +1,9 @@
 export const rooms = [
   {
+    name: 'Grande salle 3ème étage',
+    priority: 5
+  },
+  {
     name: 'Eiffel',
     priority: 4
   },
