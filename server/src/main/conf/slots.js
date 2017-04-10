@@ -63,32 +63,26 @@ export const slotsData = {
       talks: [
         {
           id: 5,
-          text: 'Développer un pipeline complet de Machine Learning avec Spark ML',
-          fondation: 'Data',
-          attendees: 0
-        },
-        {
-          id: 6,
           text: 'SMACK : Embrassez le Fast Data',
           fondation: 'Data',
           attendees: 0
         },
         {
-          id: 7,
+          id: 6,
           text: 'Swift Basics',
           fondation: 'Mobile',
           attendees: 0
         },
         {
-          id: 8,
+          id: 7,
           text: ' Open Space Agile + XScale',
           fondation: 'Agile',
           attendees: 0
         },
         {
-          id: 9,
-          text: 'PhantomJS pour les gros',
-          fondation: 'Front',
+          id: 8,
+          text: 'PhantomJS + Spark ML',
+          fondation: 'Divers',
           attendees: 0
         }
       ]
