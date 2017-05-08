@@ -4,11 +4,11 @@ export const rooms = [
         priority: 5
     },
     {
-        name: 'Grande salle 3ème étage',
+        name: 'Haussman',
         priority: 4
     },
     {
-        name: 'Haussman',
+        name: 'Grande salle 3ème étage',
         priority: 3
     },
     {

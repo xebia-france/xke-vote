@@ -1,59 +1,59 @@
 export const slotsData = {
   am: [{
-      period: '11h00-12h00',
+      period: '10h00-12h00',
       talks: [
           {
               id: 1,
-              text: 'AWS - RDS',
-              fondation: 'Cloud',
-              attendees: 0
-          },
-          {
-              id: 2,
-              text: 'Présentation de Apache Kudu',
+              text: 'Luigi: le machine learning lui dit merci',
               fondation: 'Data',
               attendees: 0
           },
           {
+              id: 2,
+              text: 'Akka http, ça marche comment ?',
+              fondation: 'Back',
+              attendees: 0
+          },
+          {
               id: 3,
-              text: 'REX Comment on a monté un mini-ingenico en un mois / Team ingenico',
+              text: 'Containers landscape & Présentation JUnit5',
               fondation: 'Divers',
               attendees: 0
           },
           {
               id: 4,
-              text: 'Bootcamp - Accueil Nouveaux Arrivants',
+              text: 'Une organisation devops, c\'est quoi concrètement? & REX Métriques projet FashIcon',
               fondation: 'Divers',
-              attendees: 13
+              attendees: 0
           }
       ]
   }],
   pm: [
     {
-      period: '14h00-16h00',
+      period: '15h00-16h00',
       talks: [
         {
           id: 1,
-          text: 'Search and Hbase. Indexer ses données au fil de l\'eau',
-          fondation: 'Data',
-          attendees: 0
-        },
-        {
-          id: 2,
-          text: 'Transformer sa banale application web en PWA du futur',
-          fondation: 'Mobile',
-          attendees: 0
-        },
-        {
-          id: 3,
-          text: "Algorithmes du quotidien",
+          text: 'Algorithme du quotidien',
           fondation: 'Divers',
           attendees: 0
         },
         {
+          id: 2,
+          text: 'REX BNP : Les facteurs clés d\'une bonne cohabitation',
+          fondation: 'Agile',
+          attendees: 0
+        },
+        {
+          id: 3,
+          text: "TensorFlow",
+          fondation: 'Data',
+          attendees: 0
+        },
+        {
           id: 4,
-          text: 'AWS : StepFunctions workflow de lambda + REX : Devops @ Photobox',
-          fondation: 'Cloud',
+          text: 'Fondations Atelier',
+          fondation: 'Divers',
           attendees: 0
         }
       ]
@@ -63,26 +63,20 @@ export const slotsData = {
       talks: [
         {
           id: 5,
-          text: 'SMACK : Embrassez le Fast Data',
+          text: 'Elasticsearch from zero to hero',
           fondation: 'Data',
           attendees: 0
         },
         {
           id: 6,
-          text: 'Swift Basics',
-          fondation: 'Mobile',
-          attendees: 0
-        },
-        {
-          id: 7,
-          text: ' Open Space Agile + XScale',
+          text: 'Comment bien proposer le déploiement de SAFe ? & Transfo Agile chez EDF : Le déploiement (épisode 2)',
           fondation: 'Agile',
           attendees: 0
         },
         {
-          id: 8,
-          text: 'PhantomJS + Spark ML',
-          fondation: 'Divers',
+          id: 7,
+          text: ' GraphQL & Comment mon chat(bot) arrive à me comprendre ?',
+          fondation: 'Agile',
           attendees: 0
         }
       ]
