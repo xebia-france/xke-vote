@@ -1,22 +1,18 @@
 export const rooms = [
     {
         name: 'Eiffel',
-        priority: 5
-    },
-    {
-        name: 'Haussman',
         priority: 4
     },
     {
-        name: 'Grande salle 3ème étage',
+        name: 'Haussman',
         priority: 3
     },
     {
-        name: 'Montmartre',
+        name: 'Grande salle 3ème étage',
         priority: 2
     },
     {
-        name: 'Monceau',
+        name: 'Montmartre',
         priority: 1
     }
 ];
