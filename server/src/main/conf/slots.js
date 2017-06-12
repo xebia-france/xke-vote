@@ -34,8 +34,8 @@ export const slotsData = {
       talks: [
         {
           id: 1,
-          text: 'Serverless6',
-          fondation: 'Divers',
+          text: 'Serverless',
+          fondation: 'Craft',
           attendees: 0
         },
         {
@@ -53,7 +53,7 @@ export const slotsData = {
         {
           id: 4,
           text: 'Test Unitaire & BDD (IOS) | Coder un plugin Gradle en Kotlin',
-          fondation: 'Divers',
+          fondation: 'Mobile',
           attendees: 0
         }
       ]
