@@ -34,25 +34,25 @@ export const slotsData = {
       talks: [
         {
           id: 1,
-          text: 'Algorithme du quotidien',
+          text: 'Serverless6',
           fondation: 'Divers',
           attendees: 0
         },
         {
           id: 2,
-          text: 'REX BNP : Les facteurs clés d\'une bonne cohabitation',
-          fondation: 'Agile',
+          text: 'Atelier fondations',
+          fondation: 'Divers',
           attendees: 0
         },
         {
           id: 3,
-          text: "TensorFlow",
-          fondation: 'Data',
+          text: "Démarrage CORE DRSA",
+          fondation: 'Agile',
           attendees: 0
         },
         {
           id: 4,
-          text: 'Fondations Atelier',
+          text: 'Test Unitaire & BDD (IOS) | Coder un plugin Gradle en Kotlin',
           fondation: 'Divers',
           attendees: 0
         }
@@ -63,22 +63,28 @@ export const slotsData = {
       talks: [
         {
           id: 5,
-          text: 'Elasticsearch from zero to hero',
-          fondation: 'Data',
+          text: 'React Native vs Mobile',
+          fondation: 'Mobile',
           attendees: 0
         },
         {
           id: 6,
-          text: 'Comment bien proposer le déploiement de SAFe ? & Transfo Agile chez EDF : Le déploiement (épisode 2)',
+          text: 'Les nouvelles pratiques d accompagnement des transformations',
           fondation: 'Agile',
           attendees: 0
         },
         {
           id: 7,
-          text: ' GraphQL & Comment mon chat(bot) arrive à me comprendre ?',
+          text: ' REX Quand un sumo rencontre kafka',
           fondation: 'Agile',
           attendees: 0
-        }
+        },
+          {
+              id: 8,
+              text: ' REX Quand un sumo rencontre kafka | Relational Dbs and Scala',
+              fondation: 'Agile',
+              attendees: 0
+          }
       ]
     }
   ]
