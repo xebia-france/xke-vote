@@ -8,11 +8,11 @@ export const rooms = [
         priority: 3
     },
     {
-        name: 'Grande salle 3ème étage',
+        name: 'Montmartre',
         priority: 2
     },
     {
-        name: 'Montmartre',
+        name: 'Monceau',
         priority: 1
     }
 ];

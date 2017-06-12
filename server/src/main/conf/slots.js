@@ -4,8 +4,8 @@ export const slotsData = {
       talks: [
           {
               id: 1,
-              text: 'Luigi: le machine learning lui dit merci',
-              fondation: 'Data',
+              text: 'Hystrix',
+              fondation: 'Back',
               attendees: 0
           },
           {
@@ -16,13 +16,13 @@ export const slotsData = {
           },
           {
               id: 3,
-              text: 'Containers landscape & Présentation JUnit5',
-              fondation: 'Divers',
+              text: 'Comment configurer JIRA pour un train SAFe ?',
+              fondation: 'Agile',
               attendees: 0
           },
           {
               id: 4,
-              text: 'Une organisation devops, c\'est quoi concrètement? & REX Métriques projet FashIcon',
+              text: 'RxJS + LinuxKit par Docker',
               fondation: 'Divers',
               attendees: 0
           }
