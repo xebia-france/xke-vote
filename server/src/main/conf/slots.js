@@ -4,26 +4,14 @@ export const slotsData = {
       talks: [
           {
               id: 1,
-              text: 'Hystrix',
+              text: 'Mongo + Elm',
               fondation: 'Back',
               attendees: 0
           },
           {
               id: 2,
-              text: 'Akka http, ça marche comment ?',
-              fondation: 'Back',
-              attendees: 0
-          },
-          {
-              id: 3,
-              text: 'Comment configurer JIRA pour un train SAFe ?',
+              text: 'Design Sprint + Safe',
               fondation: 'Agile',
-              attendees: 0
-          },
-          {
-              id: 4,
-              text: 'RxJS + LinuxKit par Docker',
-              fondation: 'Divers',
               attendees: 0
           }
       ]
