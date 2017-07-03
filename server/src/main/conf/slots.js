@@ -22,57 +22,62 @@ export const slotsData = {
       talks: [
         {
           id: 1,
-          text: 'Serverless',
-          fondation: 'Craft',
+          text: 'Rex bnp',
+          fondation: 'Agile',
           attendees: 0
         },
         {
           id: 2,
-          text: 'Atelier fondations',
+          text: 'IA as a service',
           fondation: 'Divers',
           attendees: 0
         },
         {
           id: 3,
-          text: "Démarrage CORE DRSA",
+          text: "Atelier Fondation",
           fondation: 'Agile',
-          attendees: 0
-        },
-        {
-          id: 4,
-          text: 'Test Unitaire & BDD (IOS) | Coder un plugin Gradle en Kotlin',
-          fondation: 'Mobile',
           attendees: 0
         }
       ]
     },
     {
-      period: '16h30-18h30',
+      period: '16h30-17h30',
       talks: [
         {
           id: 5,
-          text: 'React Native vs Mobile',
-          fondation: 'Mobile',
+          text: 'Atelier creation de marque',
+          fondation: 'Agile',
           attendees: 0
         },
         {
           id: 6,
-          text: 'Les nouvelles pratiques d accompagnement des transformations',
-          fondation: 'Agile',
+          text: 'Android security',
+          fondation: 'Mobile',
           attendees: 0
         },
         {
           id: 7,
-          text: ' REX Quand un sumo rencontre kafka',
+          text: ' Communicating Sequential Processes',
+          fondation: 'Divers',
+          attendees: 0
+        }
+      ]
+    },
+    {
+      period: '17h30-18h30',
+      talks: [
+        {
+          id: 8,
+          text: 'Women in tech',
           fondation: 'Agile',
           attendees: 0
         },
-          {
-              id: 8,
-              text: ' REX Quand un sumo rencontre kafka | Relational Dbs and Scala',
-              fondation: 'Agile',
-              attendees: 0
-          }
+        {
+          id: 9,
+          text: 'Kanban + InjectionForXcode',
+          fondation: 'Divers',
+          attendees: 0
+        }
       ]
     }
   ]
