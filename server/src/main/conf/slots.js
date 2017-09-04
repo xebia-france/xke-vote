@@ -4,16 +4,22 @@ export const slotsData = {
       talks: [
           {
               id: 1,
-              text: 'Mongo + Elm',
+              text: 'X-QR-Code',
               fondation: 'Back',
               attendees: 0
           },
           {
               id: 2,
-              text: 'Design Sprint + Safe',
+              text: 'Hystrix',
               fondation: 'Agile',
               attendees: 0
-          }
+          },
+        {
+          id: 3,
+          text: 'Kafka',
+          fondation: 'Data',
+          attendees: 0
+        }
       ]
   }],
   pm: [
